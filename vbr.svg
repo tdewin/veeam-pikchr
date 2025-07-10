@@ -1,0 +1,118 @@
+<svg xmlns='http://www.w3.org/2000/svg' style='font-size:initial;' viewBox="0 0 1428.19 1333.66" data-pikchr-date="20250319161943">
+<path d="M16.56,1331.5L1411.63,1331.5A14.4 14.4 0 0 0 1426.03 1317.1L1426.03,66.15A14.4 14.4 0 0 0 1411.63 51.75L16.56,51.75A14.4 14.4 0 0 0 2.16 66.15L2.16,1317.1A14.4 14.4 0 0 0 16.56 1331.5Z"  style="fill:none;stroke-width:1.4472;stroke:rgb(80,88,97);" />
+<path d="M425.232,1086.7L533.232,1086.7L533.232,978.697L425.232,978.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="479.232" y="1032.7" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Proxy</text>
+<path d="M587.232,1302.7L695.232,1302.7L695.232,1194.7L587.232,1194.7Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);stroke-dasharray:7.2,7.2;" />
+<text x="641.232" y="1236.1" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">VAULT</text>
+<text x="641.232" y="1258.78" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Proxy or GW</text>
+<path d="M749.232,1086.7L857.232,1086.7L857.232,978.697L749.232,978.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="803.232" y="1020.1" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Repository</text>
+<text x="803.232" y="1045.3" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Gateway</text>
+<path d="M1289.23,1086.7L1397.23,1086.7L1397.23,978.697L1289.23,978.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="1343.23" y="1020.1" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Repository</text>
+<text x="1343.23" y="1045.3" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Gateway</text>
+<path d="M1019.23,1086.7L1127.23,1086.7L1127.23,978.697L1019.23,978.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="1073.23" y="1020.1" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Mount</text>
+<text x="1073.23" y="1045.3" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Server</text>
+<path d="M587.232,744.697L695.232,744.697L695.232,636.697L587.232,636.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="641.232" y="690.697" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">VBR</text>
+<path d="M600.732,784.297L600.732,834.697A40.5 10.8 0 0 0 681.732 834.697L681.732,784.297A40.5 10.8 0 0 0 600.732 784.297A40.5 10.8 0 0 0 681.732 784.297"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="641.232" y="817.597" text-anchor="middle" fill="rgb(0,209,95)" font-size="64%" dominant-baseline="central">PostgresSQL</text>
+<polygon points="641.232,773.497 636.912,761.977 645.552,761.977" style="fill:rgb(80,88,97)"/>
+<path d="M641.232,744.697L641.232,767.737"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="687.946" y="758.377" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 5432</text>
+<path d="M833.779,433.35L963.379,433.35A43.2 43.2 0 0 0 1006.58 390.15L1006.58,368.55A43.2 43.2 0 0 0 963.379 325.35L833.779,325.35A43.2 43.2 0 0 0 790.579 368.55L790.579,390.15A43.2 43.2 0 0 0 833.779 433.35Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="898.579" y="379.35" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">*.veeam.com</text>
+<path d="M833.779,555.75L963.379,555.75A43.2 43.2 0 0 0 1006.58 512.55L1006.58,490.95A43.2 43.2 0 0 0 963.379 447.75L833.779,447.75A43.2 43.2 0 0 0 790.579 490.95L790.579,512.55A43.2 43.2 0 0 0 833.779 555.75Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="898.579" y="491.67" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">*.ss2.us</text>
+<text x="898.579" y="511.83" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">*.amazontrust.com</text>
+<path d="M833.779,310.95L963.379,310.95A43.2 43.2 0 0 0 1006.58 267.75L1006.58,246.15A43.2 43.2 0 0 0 963.379 202.95L833.779,202.95A43.2 43.2 0 0 0 790.579 246.15L790.579,267.75A43.2 43.2 0 0 0 833.779 310.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="898.579" y="234.27" text-anchor="middle" fill="rgb(87,224,255)" font-size="125%" dominant-baseline="central">VAULT</text>
+<text x="898.579" y="256.95" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">*.blob.core.windows.net</text>
+<text x="898.579" y="277.11" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">*.blob.storage.azure.net</text>
+<path d="M833.779,188.55L963.379,188.55A43.2 43.2 0 0 0 1006.58 145.35L1006.58,123.75A43.2 43.2 0 0 0 963.379 80.55L833.779,80.55A43.2 43.2 0 0 0 790.579 123.75L790.579,145.35A43.2 43.2 0 0 0 833.779 188.55Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="898.579" y="111.87" text-anchor="middle" fill="rgb(87,224,255)" font-size="125%" dominant-baseline="central">VAULT</text>
+<text x="898.579" y="134.55" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">ocsp.digicert.com</text>
+<text x="898.579" y="154.71" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">ocsp.msocsp.com</text>
+<path d="M1019.23,744.697L1127.23,744.697L1127.23,636.697L1019.23,636.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="1073.23" y="678.097" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">VBR</text>
+<text x="1073.23" y="703.297" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">Console</text>
+<path d="M101.232,816.697L209.232,816.697L209.232,708.697L101.232,708.697Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="155.232" y="762.697" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">VCENTER</text>
+<path d="M101.232,939.097L209.232,939.097L209.232,831.097L101.232,831.097Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="155.232" y="885.097" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">ESXI</text>
+<polygon points="749.232,1025.5 737.712,1029.82 737.712,1021.18" style="fill:rgb(80,88,97)"/>
+<path d="M533.232,1025.5L743.472,1025.5"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="698.774" y="1010.38" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="1006.58,372.15 1018.1,367.83 1018.1,376.47" style="fill:rgb(80,88,97)"/>
+<path d="M810.432,1086.7L810.432,1129.9L1235.23,1129.9L1235.23,372.15L1012.34,372.15"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1022.83" y="1114.78" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">HTTPS 443 for Hardened Repo</text>
+<polygon points="1336.03,1086.7 1340.35,1098.22 1331.71,1098.22" style="fill:rgb(80,88,97)"/>
+<path d="M796.032,1086.7L796.032,1144.3L1336.03,1144.3L1336.03,1092.46"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1066.03" y="1159.42" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500 (copy)</text>
+<polygon points="587.232,683.497 575.712,687.817 575.712,679.177" style="fill:rgb(80,88,97)"/>
+<path d="M472.032,978.697L472.032,683.497L581.472,683.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="529.632" y="668.377" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="486.432,978.697 482.112,967.177 490.752,967.177" style="fill:rgb(80,88,97)"/>
+<path d="M587.232,697.897L486.432,697.897L486.432,972.937"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="500.832" y="888.697" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">445,443,135,49152 to 65535</text>
+<text x="500.832" y="908.857" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">22</text>
+<text x="500.832" y="929.017" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">6162,6160,6210</text>
+<text x="500.832" y="949.177" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="695.232,697.897 706.752,693.577 706.752,702.217" style="fill:rgb(80,88,97)"/>
+<path d="M796.032,978.697L796.032,697.897L700.992,697.897"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="745.632" y="713.017" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="810.432,978.697 806.112,967.177 814.752,967.177" style="fill:rgb(80,88,97)"/>
+<path d="M695.232,683.497L810.432,683.497L810.432,972.937"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="824.832" y="888.697" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">445,443,135,49152 to 65535</text>
+<text x="824.832" y="908.857" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">22</text>
+<text x="824.832" y="929.017" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">6162,6160,6210</text>
+<text x="824.832" y="949.177" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="209.232,755.497 220.752,751.177 220.752,759.817" style="fill:rgb(80,88,97)"/>
+<path d="M619.632,636.697L619.632,607.897L238.032,607.897L238.032,755.497L214.992,755.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="265.104" y="592.777" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="101.232,755.497 89.712,759.817 89.712,751.177" style="fill:rgb(80,88,97)"/>
+<path d="M425.232,1039.9L72.432,1039.9L72.432,755.497L95.472,755.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="72.432" y="1055.02" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="209.232,877.897 220.752,873.577 220.752,882.217" style="fill:rgb(80,88,97)"/>
+<path d="M605.232,636.697L605.232,622.297L252.432,622.297L252.432,877.897L214.992,877.897"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="293.904" y="842.617" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<text x="293.904" y="862.777" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 902</text>
+<polygon points="209.232,892.297 220.752,887.977 220.752,896.617" style="fill:rgb(80,88,97)"/>
+<path d="M425.232,1025.5L252.432,1025.5L252.432,892.297L214.992,892.297"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="314.813" y="907.417" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443, 902</text>
+<polygon points="790.579,379.35 779.059,383.67 779.059,375.03" style="fill:rgb(80,88,97)"/>
+<path d="M662.832,636.697L662.832,379.35L784.819,379.35"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="726.706" y="364.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="790.579,501.75 779.059,506.07 779.059,497.43" style="fill:rgb(80,88,97)"/>
+<path d="M677.232,636.697L677.232,501.75L784.819,501.75"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="733.906" y="486.63" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 80</text>
+<polygon points="790.579,264.15 779.059,268.47 779.059,259.83" style="fill:rgb(80,88,97)"/>
+<path d="M648.432,636.697L648.432,264.15L784.819,264.15"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="719.506" y="279.27" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="790.579,141.75 779.059,146.07 779.059,137.43" style="fill:rgb(80,88,97)"/>
+<path d="M634.032,636.697L634.032,141.75L784.819,141.75"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="712.306" y="156.87" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 80</text>
+<polygon points="790.579,249.75 779.059,254.07 779.059,245.43" style="fill:rgb(80,88,97)"/>
+<path d="M587.232,1241.5L58.032,1241.5L58.032,249.75L784.819,249.75"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="424.306" y="234.63" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="790.579,127.35 779.059,131.67 779.059,123.03" style="fill:rgb(80,88,97)"/>
+<path d="M587.232,1255.9L43.632,1255.9L43.632,127.35L784.819,127.35"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="417.106" y="112.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 80</text>
+<polygon points="587.232,1194.7 576.031,1189.61 582.141,1183.5" style="fill:rgb(80,88,97)"/>
+<path d="M479.232,1086.7L583.159,1190.62"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);stroke-dasharray:7.2,7.2;" />
+<polygon points="695.232,1194.7 699.055,1183 705.802,1188.4" style="fill:rgb(80,88,97)"/>
+<path d="M781.632,1086.7L698.83,1190.2"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);stroke-dasharray:7.2,7.2;" />
+<polygon points="695.232,669.097 706.752,664.777 706.752,673.417" style="fill:rgb(80,88,97)"/>
+<path d="M1019.23,669.097L700.992,669.097"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="857.232" y="653.977" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 9392, 9420, 9396, 9401</text>
+<polygon points="1073.23,978.697 1068.91,967.177 1077.55,967.177" style="fill:rgb(80,88,97)"/>
+<path d="M1073.23,744.697L1073.23,972.937"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1143.68" y="861.697" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 2500-3300</text>
+<polygon points="1006.58,386.55 1018.1,382.23 1018.1,390.87" style="fill:rgb(80,88,97)"/>
+<path d="M1094.83,636.697L1094.83,386.55L1012.34,386.55"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1136.3" y="511.624" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<path d="M566.496,66.15L861.696,66.15A14.4 14.4 0 0 0 876.096 51.75A14.4 14.4 0 0 0 861.696 37.35L566.496,37.35A14.4 14.4 0 0 0 552.096 51.75A14.4 14.4 0 0 0 566.496 66.15Z"  style="fill:rgb(255,255,255);stroke-width:0;stroke:rgb(80,88,97);" />
+<text x="714.096" y="51.75" text-anchor="middle" font-style="italic" fill="rgb(80,88,97)" dominant-baseline="central">Port design for VBR</text>
+<text x="714.096" y="22.95" text-anchor="middle" font-weight="bold" fill="rgb(255,0,0)" font-size="156.25%" dominant-baseline="central">DRAFT / Not Reviewed</text>
+</svg>
