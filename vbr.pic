@@ -182,6 +182,7 @@ text "TCP 443" with .w at previous.e
 
 Border: box thin width DIAGRAM.width+$margin height DIAGRAM.height+$margin at DIAGRAM.center rad 0.1in color $gray behind DIAGRAM
 Caption: box "Port design for VBR" italic with .c at Border.n color $gray fill white width 300% height $margin/2 thickness 0 rad 0.1
+text "DRAFT / Not Reviewed" big big big bold with .c at Caption.n+(0,0.1) color red 
 
 
 /*
@@ -192,9 +193,10 @@ with esbuild.css
 
 text {
  font-family: "ES Build Full Bauhaus";
- font-size: 20px;
+ font-size: 14px;
 }
 
 powerpoint ready
 pbpaste > vbr.svg && rsvg-convert -f svg -o vbr-fonttopath.svg -w 2048 -a -s esbuild.css vbr.svg
 */
+
