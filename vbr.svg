@@ -41,15 +41,6 @@
 <text x="155.232" y="762.697" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">VCENTER</text>
 <path d="M101.232,939.097L209.232,939.097L209.232,831.097L101.232,831.097Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
 <text x="155.232" y="885.097" text-anchor="middle" fill="rgb(0,209,95)" font-size="125%" dominant-baseline="central">ESXI</text>
-<polygon points="749.232,1025.5 737.712,1029.82 737.712,1021.18" style="fill:rgb(80,88,97)"/>
-<path d="M533.232,1025.5L743.472,1025.5"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="698.774" y="1010.38" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
-<polygon points="1006.58,372.15 1018.1,367.83 1018.1,376.47" style="fill:rgb(80,88,97)"/>
-<path d="M810.432,1086.7L810.432,1129.9L1235.23,1129.9L1235.23,372.15L1012.34,372.15"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
-<text x="1022.83" y="1114.78" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">HTTPS 443 for Hardened Repo</text>
-<polygon points="1336.03,1086.7 1340.35,1098.22 1331.71,1098.22" style="fill:rgb(80,88,97)"/>
-<path d="M796.032,1086.7L796.032,1144.3L1336.03,1144.3L1336.03,1092.46"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
-<text x="1066.03" y="1159.42" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500 (copy)</text>
 <polygon points="587.232,683.497 575.712,687.817 575.712,679.177" style="fill:rgb(80,88,97)"/>
 <path d="M472.032,978.697L472.032,683.497L581.472,683.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="529.632" y="668.377" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
@@ -59,15 +50,21 @@
 <text x="500.832" y="908.857" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">22</text>
 <text x="500.832" y="929.017" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">6162,6160,6210</text>
 <text x="500.832" y="949.177" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
-<polygon points="695.232,697.897 706.752,693.577 706.752,702.217" style="fill:rgb(80,88,97)"/>
-<path d="M796.032,978.697L796.032,697.897L700.992,697.897"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
-<text x="745.632" y="713.017" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="749.232,1025.5 737.712,1029.82 737.712,1021.18" style="fill:rgb(80,88,97)"/>
+<path d="M533.232,1025.5L743.472,1025.5"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="698.774" y="1010.38" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
 <polygon points="810.432,978.697 806.112,967.177 814.752,967.177" style="fill:rgb(80,88,97)"/>
-<path d="M695.232,683.497L810.432,683.497L810.432,972.937"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<path d="M810.432,972.937L810.432,697.897L695.232,697.897"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="824.832" y="888.697" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">445,443,135,49152 to 65535</text>
 <text x="824.832" y="908.857" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">22</text>
 <text x="824.832" y="929.017" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">6162,6160,6210</text>
 <text x="824.832" y="949.177" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="695.232,712.297 706.752,707.977 706.752,716.617" style="fill:rgb(80,88,97)"/>
+<path d="M700.992,712.297L796.032,712.297L796.032,978.697"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="745.632" y="727.417" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500</text>
+<polygon points="1336.03,1086.7 1340.35,1098.22 1331.71,1098.22" style="fill:rgb(80,88,97)"/>
+<path d="M796.032,1086.7L796.032,1144.3L1336.03,1144.3L1336.03,1092.46"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1066.03" y="1159.42" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">2500-3500 (copy)</text>
 <polygon points="209.232,755.497 220.752,751.177 220.752,759.817" style="fill:rgb(80,88,97)"/>
 <path d="M619.632,636.697L619.632,607.897L238.032,607.897L238.032,755.497L214.992,755.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="265.104" y="592.777" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
@@ -81,6 +78,12 @@
 <polygon points="209.232,892.297 220.752,887.977 220.752,896.617" style="fill:rgb(80,88,97)"/>
 <path d="M425.232,1025.5L252.432,1025.5L252.432,892.297L214.992,892.297"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="314.813" y="907.417" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443, 902</text>
+<polygon points="1006.58,372.15 1018.1,367.83 1018.1,376.47" style="fill:rgb(80,88,97)"/>
+<path d="M810.432,1086.7L810.432,1129.9L1256.83,1129.9L1256.83,372.15L1012.34,372.15"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1033.63" y="1114.78" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">HTTPS 443 for Hardened Repo</text>
+<polygon points="1256.83,1032.7 1245.31,1037.02 1245.31,1028.38" style="fill:rgb(80,88,97)"/>
+<path d="M1127.23,1032.7L1251.07,1032.7"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1192.03" y="1017.58" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">HTTPS 443 AV</text>
 <polygon points="790.579,379.35 779.059,383.67 779.059,375.03" style="fill:rgb(80,88,97)"/>
 <path d="M662.832,636.697L662.832,379.35L784.819,379.35"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="726.706" y="364.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
@@ -106,12 +109,18 @@
 <polygon points="695.232,669.097 706.752,664.777 706.752,673.417" style="fill:rgb(80,88,97)"/>
 <path d="M1019.23,669.097L700.992,669.097"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="857.232" y="653.977" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 9392, 9420, 9396, 9401</text>
-<polygon points="1073.23,978.697 1068.91,967.177 1077.55,967.177" style="fill:rgb(80,88,97)"/>
-<path d="M1073.23,744.697L1073.23,972.937"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="1143.68" y="861.697" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 2500-3300</text>
 <polygon points="1006.58,386.55 1018.1,382.23 1018.1,390.87" style="fill:rgb(80,88,97)"/>
 <path d="M1094.83,636.697L1094.83,386.55L1012.34,386.55"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
 <text x="1136.3" y="511.624" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 443</text>
+<polygon points="1073.23,978.697 1068.91,967.177 1077.55,967.177" style="fill:rgb(80,88,97)"/>
+<path d="M1073.23,744.697L1073.23,972.937"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1143.68" y="861.697" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 2500-3300</text>
+<polygon points="695.232,683.497 706.752,679.177 706.752,687.817" style="fill:rgb(80,88,97)"/>
+<path d="M1051.63,978.697L1051.63,759.097L857.232,759.097L857.232,683.497L700.992,683.497"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="873.432" y="698.617" text-anchor="start" fill="rgb(80,88,97)" dominant-baseline="central">TCP 9401</text>
+<polygon points="857.232,1032.7 868.752,1028.38 868.752,1037.02" style="fill:rgb(80,88,97)"/>
+<path d="M1019.23,1032.7L862.992,1032.7"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="938.232" y="1047.82" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">TCP 2500-3300</text>
 <path d="M566.496,66.15L861.696,66.15A14.4 14.4 0 0 0 876.096 51.75A14.4 14.4 0 0 0 861.696 37.35L566.496,37.35A14.4 14.4 0 0 0 552.096 51.75A14.4 14.4 0 0 0 566.496 66.15Z"  style="fill:rgb(255,255,255);stroke-width:0;stroke:rgb(80,88,97);" />
 <text x="714.096" y="51.75" text-anchor="middle" font-style="italic" fill="rgb(80,88,97)" dominant-baseline="central">Port design for VBR</text>
 <text x="714.096" y="22.95" text-anchor="middle" font-weight="bold" fill="rgb(255,0,0)" font-size="156.25%" dominant-baseline="central">DRAFT / Not Reviewed</text>
