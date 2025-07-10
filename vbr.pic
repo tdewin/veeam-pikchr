@@ -26,32 +26,59 @@ DIAGRAM: [
 PROX: box  color $green "Proxy" big 
 IHPROX: box at last box height $poffset invis
 IVPROX: box at 2nd last box width $poffset invis
+IVVPROX: box at 2nd last box width 3*$poffset invis
 
-REPO: box same as PROX at PROX+(3*boxwid,0) "Repository" big 
+VAULTPROX: box color $green "VAULT" big "Proxy or GW"  with .n at PROX.s - (-1.5*boxwid,boxht) dashed
+IHVAULTPROX: box at last box height $poffset invis
+
+REPO: box same as PROX at PROX+(3*boxwid,0) "Repository" big "Gateway" big 
 IHREPO: box at last box height $poffset invis
 IVREPO: box at 2nd last box width $poffset invis
+IVVREPO: box at 2nd last box width 3*$poffset invis
 
-MOUNT: box same as PROX with .w at REPO.e+(boxwid,0) "Mount" big "Server" big
+
+COPYREPO: box same as PROX at REPO+(5*boxwid,0) "Repository" big "Gateway" big 
+IHCOPYREPO: box at last box height $poffset invis
+IVCOPYREPO: box at 2nd last box width $poffset invis
+IVVCOPYREPO: box at 2nd last box width 3*$poffset invis
+
+MOUNT: box same as PROX with .w at REPO.e+(1.5*boxwid,0) "Mount" big "Server" big
 
 //vbr
-VBR: box  same as PROX at PROX.n+(1.5*boxwid,1.5) "VBR" big 
+VBR: box  same as PROX at PROX.n+(1.5*boxwid,2) "VBR" big 
 IHVBR: box at last box height $poffset invis
+IHHVBR: box at last box height 3*$poffset invis
 IVVBR: box at last box width $poffset invis
 IVVVBR: box at last box width 3*$poffset invis
-IVVVVBR: box at last box width 5*$poffset invis
+IVVVVBR: box at last box width 5*$poffset invis 
 
 PSQL: cylinder color $green with .n at VBR.s-(0,$poffset*2) width 75% "PostgresSQL" small small small 
 arrow -> from VBR.s to PSQL.n
 text "TCP 5432" with .sw at previous cylinder.n
 
 
-CLOUD: box rad 0.3 color $sky with .sw at VBR.ne+(boxwid,2*boxwid) \
- "*.veeam.com"  width 200%
-CLOUD80: box rad 0.3 color $sky with .n at CLOUD.s-(0,$poffset) \
- "*.ss2.us" "*.amazontrust.com" width 200%
+CLOUD: box rad 0.3 color $sky with .sw at VBR.ne+(boxwid,2*boxwid) width 200% \
+ "*.veeam.com"  
+IHCLOUD:  box at last box height $poffset width 200% invis
+
+CLOUD80: box rad 0.3 color $sky with .n at CLOUD.s-(0,$poffset) width 200% \
+ "*.ss2.us" "*.amazontrust.com" 
+IHCLOUD80:  box at last box height $poffset width 200% invis
+
+AZCLOUD: box rad 0.3 color $sky with .s at CLOUD.n+(0,$poffset) width 200% \
+ "VAULT" big "*.blob.core.windows.net" "*.blob.storage.azure.net"
+
+IHAZCLOUD:  box at last box height $poffset width 200% invis
+
+AZCLOUD80: box rad 0.3 color $sky with .s at AZCLOUD.n+(0,$poffset) width 200% \
+ "VAULT" big "ocsp.digicert.com" "ocsp.msocsp.com"
+
+IHAZCLOUD80:  box at last box height $poffset width 200% invis
 
 
-CONSOLE: box color $green with .nw at VBR.s+(3*boxwid,boxwid) "VBR" big "Console" big
+CONSOLE: box color $green with .nw at VBR.s+(3.5*boxwid,boxwid) "VBR" big "Console" big
+IHCONSOLE: box at last box height $poffset invis
+IHHCONSOLE: box at last box height 3*$poffset invis
 IVCONSOLE: box at last box width $poffset invis
 IVVCONSOLE: box at last box width 3*$poffset invis
 IVVVCONSOLE: box at last box width 5*$poffset invis
@@ -67,48 +94,86 @@ IVESXI: box at 2nd last box width $poffset invis
 
 
 PR: arrow -> from IHPROX.ne to IHREPO.nw
-text "6162,6160" "2500-3500" with .se at previous.ne
+text  "2500-3500" with .se at previous.ne
 
-RP: arrow ->  from IHREPO.sw to IHPROX.se 
-text "6162,6160" "2500-3500" with .nw at previous.sw
+//RP: arrow ->  from IHREPO.sw to IHPROX.se 
+//text "6162,6160" "2500-3500" with .nw at previous.sw
 
+HRC: arrow -> from IVREPO.se down 3*$poffset then right until even with CONSOLE.e+(boxht,0) then up until even with IHCLOUD.n then left until even with IHCLOUD.ne
+text "HTTPS 443 for Hardened Repo" with .s at previous.s
 
+COPYA: arrow -> from IVREPO.sw down 4*$poffset then right until even with IVCOPYREPO.sw then to IVCOPYREPO.sw
+text "2500-3500 (copy)" with .n at previous.s
 
 PV: arrow ->  from IVPROX.nw up until even with IHVBR.nw then to IHVBR.nw
-text "6162,6160" "2500-3500" with .s at previous.n
+text "2500-3500" with .s at previous.n
 
 VP: arrow ->  from IHVBR.sw left until even with IVPROX.ne then to IVPROX.ne
-text "6162,6160" "2500-3500" with .s at previous.s
+
+text "445,443,135,49152 to 65535" ljust "22" ljust "6162,6160,6210" ljust "2500-3500" ljust  with .s at previous arrow.sw+($poffset,$poffset)
 
 
-RV: arrow ->  from IVREPO.ne up until even with IHVBR.ne then to IHVBR.ne
-text "6162,6160" "2500-3500" with .s at previous.n
+RV: arrow ->  from IVREPO.nw up until even with IHVBR.se then to IHVBR.se
+text  "2500-3500" with .n at previous.n
 
-VR: arrow ->  from IHVBR.se left until even with IVREPO.nw then to IVREPO.nw
-text "6162,6160" "2500-3500" with .s at previous.s
+VR: arrow ->  from IHVBR.ne right until even with IVREPO.ne then to IVREPO.ne
+text "445,443,135,49152 to 65535" ljust "22" ljust "6162,6160,6210" ljust "2500-3500" ljust  with .s at previous.se+($poffset,$poffset)
 
+
+/*
+ VIRT CONNECTIONS
+*/
 
 VV: arrow -> from IVVVBR.nw up 2*$poffset then right until even with IHVCENTER.ne+($poffset*2,0) then down until even with IHVCENTER.ne then to IHVCENTER.ne
 text "TCP 443" with .sw at previous arrow.nw +($poffset,0) 
 
+PXVC: arrow -> from IHPROX.sw left until even with IHVCENTER.nw-($poffset*2,0) then up until even with IHVCENTER.nw then to IHVCENTER.nw
+text "TCP 443" ljust with .n at previous arrow.sw 
+
+
 VE: arrow -> from IVVVVBR.nw up $poffset then right until even with IHVCENTER.ne+($poffset*3,0) then down until even with IHESXI.ne then to IHESXI.ne
 text "TCP 443" "TCP 902" with .sw at previous arrow.sw +($poffset*3,0) 
 
+PXVE: arrow -> from IHPROX.nw right until even with IHESXI.ne+($poffset*3,0) then up until even with IHESXI.se then to IHESXI.se 
+text "TCP 443, 902" with .nw at previous arrow.nw+($poffset*3,0)
 
-arrow -> from IVVBR.n up until even with CLOUD.w then to CLOUD.w
+
+/*
+ Public cloud connectors
+*/
+
+arrow -> from IVVVBR.ne up until even with CLOUD.w then to CLOUD.w
 text "TCP 443" with .s at previous.n
-arrow -> from IVVVBR.ne up until even with CLOUD80.w then to CLOUD80.w
+arrow -> from IVVVVBR.ne up until even with CLOUD80.w then to CLOUD80.w
+text "TCP 80" with .s at previous.n
+
+arrow -> from IVVBR.ne up until even with IHAZCLOUD.sw then to IHAZCLOUD.sw
+text "TCP 443" with .n at previous.n
+
+arrow -> from IVVBR.nw up until even with IHAZCLOUD80.sw then to IHAZCLOUD80.sw
+text "TCP 80" with .n at previous.n
+
+arrow -> from IHVAULTPROX.nw left until even with VCENTER.w - ($poffset*3.0,0) then up until even with IHAZCLOUD.nw then to IHAZCLOUD.nw 
+text "TCP 443" with .s at previous.n
+arrow -> from IHVAULTPROX.sw left until even with VCENTER.w - ($poffset*4.0,0) then  up until even with IHAZCLOUD80.nw then to IHAZCLOUD80.nw
 text "TCP 80" with .s at previous.n
 
 
-arrow -> from IVVCONSOLE.nw up 2*$poffset then left until even with IVVVVBR.ne then to IVVVVBR.ne
+arrow -> from IVPROX.s to VAULTPROX.nw dashed
+arrow -> from IVVREPO.sw to VAULTPROX.ne dashed
+
+/*
+ VBR Console connection
+*/
+
+arrow -> from IHHCONSOLE.nw  to IHHVBR.ne
 text "TCP 9392, 9420, 9396, 9401" with .s at previous.n
 //box at 0,0 "0";box "1";box "2";box "3"
 
 arrow -> from CONSOLE.s to MOUNT.n
 text "TCP 2500-3300" with .w at previous.e
 
-arrow -> from IVVCONSOLE.ne up until even with CLOUD then to CLOUD.e
+arrow -> from IVVCONSOLE.ne up until even with IHCLOUD.se then to IHCLOUD.se
 text "TCP 443" with .w at previous.e
 
 ]
@@ -121,7 +186,7 @@ Caption: box "Port design for VBR" italic with .c at Border.n color $gray fill w
 
 /*
 
-pbpaste > diagram.svg && rsvg-convert -o diagram.png -w 1280 -a -s esbuild.css -b "#ffffff" diagram.svg && open diagram.png
+pbpaste > vbr.svg && rsvg-convert -o vbr.png -w 1280 -a -s esbuild.css -b "#ffffff" vbr.svg && open vbr.png
 
 with esbuild.css
 
@@ -131,6 +196,5 @@ text {
 }
 
 powerpoint ready
-pbpaste > diagram.svg && rsvg-convert -f svg -o diagram-fonttopath.svg -w 2048 -a -s esbuild.css  diagram.svg
+pbpaste > vbr.svg && rsvg-convert -f svg -o vbr-fonttopath.svg -w 2048 -a -s esbuild.css vbr.svg
 */
-
