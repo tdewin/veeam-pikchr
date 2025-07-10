@@ -43,6 +43,9 @@ IVCOPYREPO: box at 2nd last box width $poffset invis
 IVVCOPYREPO: box at 2nd last box width 3*$poffset invis
 
 MOUNT: box same as PROX with .w at REPO.e+(1.5*boxwid,0) "Mount" big "Server" big
+IHMOUNT: box at last box height $poffset invis
+IVMOUNT: box at 2nd last box width $poffset invis
+IVVMOUNT: box at 2nd last box width 3*$poffset invis
 
 //vbr
 VBR: box  same as PROX at PROX.n+(1.5*boxwid,2) "VBR" big 
@@ -93,17 +96,10 @@ IHESXI: box at last box height $poffset invis
 IVESXI: box at 2nd last box width $poffset invis
 
 
-PR: arrow -> from IHPROX.ne to IHREPO.nw
-text  "2500-3500" with .se at previous.ne
 
-//RP: arrow ->  from IHREPO.sw to IHPROX.se 
-//text "6162,6160" "2500-3500" with .nw at previous.sw
-
-HRC: arrow -> from IVREPO.se down 3*$poffset then right until even with CONSOLE.e+(boxht,0) then up until even with IHCLOUD.n then left until even with IHCLOUD.ne
-text "HTTPS 443 for Hardened Repo" with .s at previous.s
-
-COPYA: arrow -> from IVREPO.sw down 4*$poffset then right until even with IVCOPYREPO.sw then to IVCOPYREPO.sw
-text "2500-3500 (copy)" with .n at previous.s
+/*
+Proxy
+*/
 
 PV: arrow ->  from IVPROX.nw up until even with IHVBR.nw then to IHVBR.nw
 text "2500-3500" with .s at previous.n
@@ -112,13 +108,22 @@ VP: arrow ->  from IHVBR.sw left until even with IVPROX.ne then to IVPROX.ne
 
 text "445,443,135,49152 to 65535" ljust "22" ljust "6162,6160,6210" ljust "2500-3500" ljust  with .s at previous arrow.sw+($poffset,$poffset)
 
+PR: arrow -> from IHPROX.ne to IHREPO.nw
+text  "2500-3500" with .se at previous.ne
 
-RV: arrow ->  from IVREPO.nw up until even with IHVBR.se then to IHVBR.se
-text  "2500-3500" with .n at previous.n
 
-VR: arrow ->  from IHVBR.ne right until even with IVREPO.ne then to IVREPO.ne
+/*
+REPO
+*/
+VR: arrow <-  from IVREPO.ne up until even with IHVBR.se then to IHVBR.se
 text "445,443,135,49152 to 65535" ljust "22" ljust "6162,6160,6210" ljust "2500-3500" ljust  with .s at previous.se+($poffset,$poffset)
 
+RV: arrow <-  from IHHVBR.se right until even with IVREPO.nw then to IVREPO.nw
+text  "2500-3500" with .n at previous arrow.n
+
+
+COPYA: arrow -> from IVREPO.sw down 4*$poffset then right until even with IVCOPYREPO.sw then to IVCOPYREPO.sw
+text "2500-3500 (copy)" with .n at previous.s
 
 /*
  VIRT CONNECTIONS
@@ -141,6 +146,12 @@ text "TCP 443, 902" with .nw at previous arrow.nw+($poffset*3,0)
 /*
  Public cloud connectors
 */
+
+HRC: arrow -> from IVREPO.se down 3*$poffset then right until even with CONSOLE.e+(1.2*boxht,0) then up until even with IHCLOUD.n then left until even with IHCLOUD.ne
+text "HTTPS 443 for Hardened Repo" with .s at previous.s
+
+MOUNTC: arrow -> from MOUNT.e right until even with CONSOLE.e+(1.2*boxht,0)
+text "HTTPS 443 AV" with .s at previous.n
 
 arrow -> from IVVVBR.ne up until even with CLOUD.w then to CLOUD.w
 text "TCP 443" with .s at previous.n
@@ -170,11 +181,24 @@ arrow -> from IHHCONSOLE.nw  to IHHVBR.ne
 text "TCP 9392, 9420, 9396, 9401" with .s at previous.n
 //box at 0,0 "0";box "1";box "2";box "3"
 
-arrow -> from CONSOLE.s to MOUNT.n
-text "TCP 2500-3300" with .w at previous.e
 
 arrow -> from IVVCONSOLE.ne up until even with IHCLOUD.se then to IHCLOUD.se
 text "TCP 443" with .w at previous.e
+
+arrow -> from CONSOLE.s to MOUNT.n
+text "TCP 2500-3300" with .w at previous.e
+
+
+/*
+ Mount server
+*/
+
+arrow -> from IVVMOUNT.nw up until even with CONSOLE.s-(0,$poffset) then left until even with REPO.ne then up until even with IHVBR.ne then to IHVBR.ne
+text "TCP 9401" ljust with .n at previous arrow.n+(0,0)
+
+arrow -> from IHMOUNT.w to IHREPO.e
+text "TCP 2500-3300" with .n at previous.c
+
 
 ]
 
@@ -199,4 +223,3 @@ text {
 powerpoint ready
 pbpaste > vbr.svg && rsvg-convert -f svg -o vbr-fonttopath.svg -w 2048 -a -s esbuild.css vbr.svg
 */
-
