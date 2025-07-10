@@ -1,0 +1,136 @@
+/*
+!!!!
+!!!! This is a work in progress and not complete nor accurate.
+!!!!
+*/
+
+$green = 0x00d15f
+$gray = 0x505861
+$sky = 0x57E0FF
+$margin = 0.4in
+
+//https://github.com/drhsqlite/pikchr/blob/2c46091ee5548d4fa3fedaea2fc8c0a05c5a89eb/pikchr.y#L976
+color = $gray
+fill = -1
+boxht = 0.75
+boxwid = 0.75
+
+$poffset = 0.1
+
+
+//https://helpcenter.veeam.com/docs/backup/vsphere/used_ports.html
+DIAGRAM: [
+
+
+//lowest line
+PROX: box  color $green "Proxy" big 
+IHPROX: box at last box height $poffset invis
+IVPROX: box at 2nd last box width $poffset invis
+
+REPO: box same as PROX at PROX+(3*boxwid,0) "Repository" big 
+IHREPO: box at last box height $poffset invis
+IVREPO: box at 2nd last box width $poffset invis
+
+MOUNT: box same as PROX with .w at REPO.e+(boxwid,0) "Mount" big "Server" big
+
+//vbr
+VBR: box  same as PROX at PROX.n+(1.5*boxwid,1.5) "VBR" big 
+IHVBR: box at last box height $poffset invis
+IVVBR: box at last box width $poffset invis
+IVVVBR: box at last box width 3*$poffset invis
+IVVVVBR: box at last box width 5*$poffset invis
+
+PSQL: cylinder color $green with .n at VBR.s-(0,$poffset*2) width 75% "PostgresSQL" small small small 
+arrow -> from VBR.s to PSQL.n
+text "TCP 5432" with .sw at previous cylinder.n
+
+
+CLOUD: box rad 0.3 color $sky with .sw at VBR.ne+(boxwid,2*boxwid) \
+ "*.veeam.com"  width 200%
+CLOUD80: box rad 0.3 color $sky with .n at CLOUD.s-(0,$poffset) \
+ "*.ss2.us" "*.amazontrust.com" width 200%
+
+
+CONSOLE: box color $green with .nw at VBR.s+(3*boxwid,boxwid) "VBR" big "Console" big
+IVCONSOLE: box at last box width $poffset invis
+IVVCONSOLE: box at last box width 3*$poffset invis
+IVVVCONSOLE: box at last box width 5*$poffset invis
+
+VCENTER: box same as PROX at PROX.n+(-3*boxwid,1.5) "VCENTER" big 
+IHVCENTER: box at last box height $poffset invis
+IVVCENTER: box at 2nd last box width $poffset invis
+
+
+ESXI: box same as PROX with .n at VCENTER.s -(0,$poffset) "ESXI" big
+IHESXI: box at last box height $poffset invis
+IVESXI: box at 2nd last box width $poffset invis
+
+
+PR: arrow -> from IHPROX.ne to IHREPO.nw
+text "6162,6160" "2500-3500" with .se at previous.ne
+
+RP: arrow ->  from IHREPO.sw to IHPROX.se 
+text "6162,6160" "2500-3500" with .nw at previous.sw
+
+
+
+PV: arrow ->  from IVPROX.nw up until even with IHVBR.nw then to IHVBR.nw
+text "6162,6160" "2500-3500" with .s at previous.n
+
+VP: arrow ->  from IHVBR.sw left until even with IVPROX.ne then to IVPROX.ne
+text "6162,6160" "2500-3500" with .s at previous.s
+
+
+RV: arrow ->  from IVREPO.ne up until even with IHVBR.ne then to IHVBR.ne
+text "6162,6160" "2500-3500" with .s at previous.n
+
+VR: arrow ->  from IHVBR.se left until even with IVREPO.nw then to IVREPO.nw
+text "6162,6160" "2500-3500" with .s at previous.s
+
+
+VV: arrow -> from IVVVBR.nw up 2*$poffset then right until even with IHVCENTER.ne+($poffset*2,0) then down until even with IHVCENTER.ne then to IHVCENTER.ne
+text "TCP 443" with .sw at previous arrow.nw +($poffset,0) 
+
+VE: arrow -> from IVVVVBR.nw up $poffset then right until even with IHVCENTER.ne+($poffset*3,0) then down until even with IHESXI.ne then to IHESXI.ne
+text "TCP 443" "TCP 902" with .sw at previous arrow.sw +($poffset*3,0) 
+
+
+arrow -> from IVVBR.n up until even with CLOUD.w then to CLOUD.w
+text "TCP 443" with .s at previous.n
+arrow -> from IVVVBR.ne up until even with CLOUD80.w then to CLOUD80.w
+text "TCP 80" with .s at previous.n
+
+
+arrow -> from IVVCONSOLE.nw up 2*$poffset then left until even with IVVVVBR.ne then to IVVVVBR.ne
+text "TCP 9392, 9420, 9396, 9401" with .s at previous.n
+//box at 0,0 "0";box "1";box "2";box "3"
+
+arrow -> from CONSOLE.s to MOUNT.n
+text "TCP 2500-3300" with .w at previous.e
+
+arrow -> from IVVCONSOLE.ne up until even with CLOUD then to CLOUD.e
+text "TCP 443" with .w at previous.e
+
+]
+
+
+
+Border: box thin width DIAGRAM.width+$margin height DIAGRAM.height+$margin at DIAGRAM.center rad 0.1in color $gray behind DIAGRAM
+Caption: box "Port design for VBR" italic with .c at Border.n color $gray fill white width 300% height $margin/2 thickness 0 rad 0.1
+
+
+/*
+
+pbpaste > diagram.svg && rsvg-convert -o diagram.png -w 1280 -a -s esbuild.css -b "#ffffff" diagram.svg && open diagram.png
+
+with esbuild.css
+
+text {
+ font-family: "ES Build Full Bauhaus";
+ font-size: 20px;
+}
+
+powerpoint ready
+pbpaste > diagram.svg && rsvg-convert -f svg -o diagram-fonttopath.svg -w 2048 -a -s esbuild.css  diagram.svg
+*/
+
