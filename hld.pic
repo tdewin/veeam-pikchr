@@ -38,7 +38,7 @@ define arrowrepo {
  arrow -> from $1.ne-(-0.01,$i*$o) right boxwid/5+$i*$o \
  then up until even with $2.nw-(0,$i*$o)\
  then to $2.nw-(0,$i*$o) rad $radl color $grey; $i += 1
- text with .sw at 1st vertex of previous arrow $3 color $policy
+ text with .s at 1st vertex of previous arrow+($o/2,0) $3 ljust color $policy
 }
 
 define locbox {

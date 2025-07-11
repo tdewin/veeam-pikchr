@@ -33,27 +33,27 @@
 <circle cx="339.6" cy="197.526" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="634.595,197.526 623.075,201.846 623.075,193.206" style="fill:rgb(80,88,97)"/>
 <path d="M339.6,197.526 L 404.4,197.526 Q 418.8,197.526 418.8,197.526 L 418.8,197.526 Q 418.8,197.526 433.2,197.526 L 614.435,197.526 L 628.835,197.526"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="394.55" y="170.31" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
+<text x="350.4" y="170.31" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
 <circle cx="339.6" cy="463.926" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="634.595,219.126 623.075,223.446 623.075,214.806" style="fill:rgb(80,88,97)"/>
 <path d="M339.6,463.926 L 426,463.926 Q 440.4,463.926 440.4,449.526 L 440.4,233.526 Q 440.4,219.126 454.8,219.126 L 614.435,219.126 L 628.835,219.126"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="394.55" y="436.71" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
+<text x="350.4" y="436.71" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
 <circle cx="339.6" cy="730.326" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="634.595,240.726 623.075,245.046 623.075,236.406" style="fill:rgb(80,88,97)"/>
 <path d="M339.6,730.326 L 447.6,730.326 Q 462,730.326 462,715.926 L 462,255.126 Q 462,240.726 476.4,240.726 L 614.435,240.726 L 628.835,240.726"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="408.236" y="703.11" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">SILVER</text>
+<text x="350.4" y="703.11" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">SILVER</text>
 <circle cx="339.6" cy="931.926" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="634.595,931.926 623.075,936.246 623.075,927.606" style="fill:rgb(80,88,97)"/>
 <path d="M339.6,931.926 L 404.4,931.926 Q 418.8,931.926 418.8,931.926 L 418.8,931.926 Q 418.8,931.926 433.2,931.926 L 614.435,931.926 L 628.835,931.926"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="372.778" y="904.71" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">DB</text>
+<text x="350.4" y="904.71" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">DB</text>
 <circle cx="339.6" cy="1176.73" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="634.595,1176.73 623.075,1181.05 623.075,1172.41" style="fill:rgb(80,88,97)"/>
 <path d="M339.6,1176.73 L 404.4,1176.73 Q 418.8,1176.73 418.8,1176.73 L 418.8,1176.73 Q 418.8,1176.73 433.2,1176.73 L 614.435,1176.73 L 628.835,1176.73"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="383.353" y="1149.51" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">NAS</text>
+<text x="350.4" y="1149.51" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">NAS</text>
 <circle cx="915.6" cy="197.526" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="1210.6,197.526 1199.08,201.846 1199.08,193.206" style="fill:rgb(80,88,97)"/>
 <path d="M915.6,197.526 L 980.4,197.526 Q 994.8,197.526 994.8,197.526 Q 994.8,197.526 1009.2,197.526 L 1190.44,197.526 L 1204.84,197.526"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="1070.6" y="170.31" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">Capacity Tier Copy</text>
+<text x="926.4" y="170.31" text-anchor="start" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">Capacity Tier Copy</text>
 <path d="M20.7777,1400.32L951.978,1400.32A14.4 14.4 0 0 0 966.378 1385.92L966.378,138.109A14.4 14.4 0 0 0 951.978 123.709L20.7777,123.709A14.4 14.4 0 0 0 6.37766 138.109L6.37766,1385.92A14.4 14.4 0 0 0 20.7777 1400.32Z"  style="fill:none;stroke-width:2.88;stroke:rgb(80,88,97);" />
 <path d="M345.258,126.589L627.498,126.589A2.88 2.88 0 0 0 630.378 123.709A2.88 2.88 0 0 0 627.498 120.829L345.258,120.829A2.88 2.88 0 0 0 342.378 123.709A2.88 2.88 0 0 0 345.258 126.589Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
 <text x="486.378" y="123.709" text-anchor="middle" fill="rgb(80,88,97)" font-size="281.25%" dominant-baseline="central">Oslo</text>
