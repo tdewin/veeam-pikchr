@@ -1,63 +1,67 @@
-<svg xmlns='http://www.w3.org/2000/svg' style='font-size:initial;' viewBox="0 0 1540.32 1289.74" data-pikchr-date="20250319161943">
-<path d="M64.56,260.382L323.76,260.382A14.4 14.4 0 0 0 338.16 245.982L338.16,101.982A14.4 14.4 0 0 0 323.76 87.582L64.56,87.582A14.4 14.4 0 0 0 50.16 101.982L50.16,245.982A14.4 14.4 0 0 0 64.56 260.382Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="194.16" y="137.694" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">vSphere VM</text>
-<text x="194.16" y="173.982" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">500TB</text>
-<text x="194.16" y="210.27" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
-<path d="M64.56,505.182L323.76,505.182A14.4 14.4 0 0 0 338.16 490.782L338.16,346.782A14.4 14.4 0 0 0 323.76 332.382L64.56,332.382A14.4 14.4 0 0 0 50.16 346.782L50.16,490.782A14.4 14.4 0 0 0 64.56 505.182Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="194.16" y="382.494" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Veeam Agent Windows</text>
-<text x="194.16" y="418.782" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">100TB</text>
-<text x="194.16" y="455.07" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
-<path d="M64.56,749.982L323.76,749.982A14.4 14.4 0 0 0 338.16 735.582L338.16,591.582A14.4 14.4 0 0 0 323.76 577.182L64.56,577.182A14.4 14.4 0 0 0 50.16 591.582L50.16,735.582A14.4 14.4 0 0 0 64.56 749.982Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="194.16" y="627.294" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Veeam Agent Linux</text>
-<text x="194.16" y="663.582" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">100TB</text>
-<text x="194.16" y="699.87" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
-<path d="M64.56,994.782L323.76,994.782A14.4 14.4 0 0 0 338.16 980.382L338.16,836.382A14.4 14.4 0 0 0 323.76 821.982L64.56,821.982A14.4 14.4 0 0 0 50.16 836.382L50.16,980.382A14.4 14.4 0 0 0 64.56 994.782Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="194.16" y="872.094" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Oracle RMAN</text>
-<text x="194.16" y="908.382" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">50TB</text>
-<text x="194.16" y="944.67" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">10%</text>
-<path d="M64.56,1239.58L323.76,1239.58A14.4 14.4 0 0 0 338.16 1225.18L338.16,1081.18A14.4 14.4 0 0 0 323.76 1066.78L64.56,1066.78A14.4 14.4 0 0 0 50.16 1081.18L50.16,1225.18A14.4 14.4 0 0 0 64.56 1239.58Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="194.16" y="1135.04" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">NAS</text>
-<text x="194.16" y="1171.33" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">1PB</text>
-<path d="M640.56,260.382L899.76,260.382A14.4 14.4 0 0 0 914.16 245.982L914.16,101.982A14.4 14.4 0 0 0 899.76 87.582L640.56,87.582A14.4 14.4 0 0 0 626.16 101.982L626.16,245.982A14.4 14.4 0 0 0 640.56 260.382Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="770.16" y="155.838" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Hardened Repo</text>
-<text x="770.16" y="192.126" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
-<path d="M640.56,994.782L899.76,994.782A14.4 14.4 0 0 0 914.16 980.382L914.16,836.382A14.4 14.4 0 0 0 899.76 821.982L640.56,821.982A14.4 14.4 0 0 0 626.16 836.382L626.16,980.382A14.4 14.4 0 0 0 640.56 994.782Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="770.16" y="890.238" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Repo DB</text>
-<text x="770.16" y="926.526" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
-<path d="M640.56,1239.58L899.76,1239.58A14.4 14.4 0 0 0 914.16 1225.18L914.16,1081.18A14.4 14.4 0 0 0 899.76 1066.78L640.56,1066.78A14.4 14.4 0 0 0 626.16 1081.18L626.16,1225.18A14.4 14.4 0 0 0 640.56 1239.58Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="770.16" y="1135.04" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Hardened Repo NAS</text>
-<text x="770.16" y="1171.33" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">10PB</text>
-<path d="M16.56,1287.58L947.76,1287.58A14.4 14.4 0 0 0 962.16 1273.18L962.16,53.982A14.4 14.4 0 0 0 947.76 39.582L16.56,39.582A14.4 14.4 0 0 0 2.16 53.982L2.16,1273.18A14.4 14.4 0 0 0 16.56 1287.58Z"  style="fill:none;stroke-width:2.88;stroke:rgb(80,88,97);" />
-<path d="M341.04,42.462L623.28,42.462A2.88 2.88 0 0 0 626.16 39.582A2.88 2.88 0 0 0 623.28 36.702L341.04,36.702A2.88 2.88 0 0 0 338.16 39.582A2.88 2.88 0 0 0 341.04 42.462Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="482.16" y="39.582" text-anchor="middle" fill="rgb(80,88,97)" font-size="281.25%" dominant-baseline="central">Oslo</text>
-<path d="M1216.56,260.382L1475.76,260.382A14.4 14.4 0 0 0 1490.16 245.982L1490.16,101.982A14.4 14.4 0 0 0 1475.76 87.582L1216.56,87.582A14.4 14.4 0 0 0 1202.16 101.982L1202.16,245.982A14.4 14.4 0 0 0 1216.56 260.382Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="1346.16" y="155.838" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Vault</text>
-<text x="1346.16" y="192.126" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
-<path d="M1168.56,308.382L1523.76,308.382A14.4 14.4 0 0 0 1538.16 293.982L1538.16,53.982A14.4 14.4 0 0 0 1523.76 39.582L1168.56,39.582A14.4 14.4 0 0 0 1154.16 53.982L1154.16,293.982A14.4 14.4 0 0 0 1168.56 308.382Z"  style="fill:none;stroke-width:2.88;stroke:rgb(80,88,97);" />
-<path d="M1205.04,42.462L1487.28,42.462A2.88 2.88 0 0 0 1490.16 39.582A2.88 2.88 0 0 0 1487.28 36.702L1205.04,36.702A2.88 2.88 0 0 0 1202.16 39.582A2.88 2.88 0 0 0 1205.04 42.462Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
-<text x="1346.16" y="39.582" text-anchor="middle" fill="rgb(80,88,97)" font-size="281.25%" dominant-baseline="central">Vault</text>
-<circle cx="335.382" cy="113.4" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="630.378,113.4 618.858,117.72 618.858,109.08" style="fill:rgb(80,88,97)"/>
-<path d="M335.382,113.4 L 400.182,113.4 Q 414.582,113.4 414.582,113.4 L 414.582,113.4 Q 414.582,113.4 428.982,113.4 L 610.218,113.4 L 624.618,113.4"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="390.333" y="86.1837" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
-<circle cx="335.382" cy="379.8" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="630.378,135 618.858,139.32 618.858,130.68" style="fill:rgb(80,88,97)"/>
-<path d="M335.382,379.8 L 421.782,379.8 Q 436.182,379.8 436.182,365.4 L 436.182,149.4 Q 436.182,135 450.582,135 L 610.218,135 L 624.618,135"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="390.333" y="352.584" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
-<circle cx="335.382" cy="646.2" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="630.378,156.6 618.858,160.92 618.858,152.28" style="fill:rgb(80,88,97)"/>
-<path d="M335.382,646.2 L 443.382,646.2 Q 457.782,646.2 457.782,631.8 L 457.782,171 Q 457.782,156.6 472.182,156.6 L 610.218,156.6 L 624.618,156.6"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="404.018" y="618.984" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">SILVER</text>
-<circle cx="335.382" cy="847.8" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="630.378,847.8 618.858,852.12 618.858,843.48" style="fill:rgb(80,88,97)"/>
-<path d="M335.382,847.8 L 400.182,847.8 Q 414.582,847.8 414.582,847.8 L 414.582,847.8 Q 414.582,847.8 428.982,847.8 L 610.218,847.8 L 624.618,847.8"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="368.56" y="820.584" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">DB</text>
-<circle cx="335.382" cy="1092.6" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="630.378,1092.6 618.858,1096.92 618.858,1088.28" style="fill:rgb(80,88,97)"/>
-<path d="M335.382,1092.6 L 400.182,1092.6 Q 414.582,1092.6 414.582,1092.6 L 414.582,1092.6 Q 414.582,1092.6 428.982,1092.6 L 610.218,1092.6 L 624.618,1092.6"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="379.135" y="1065.38" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">NAS</text>
-<circle cx="911.382" cy="113.4" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
-<polygon points="1206.38,113.4 1194.86,117.72 1194.86,109.08" style="fill:rgb(80,88,97)"/>
-<path d="M911.382,113.4 L 976.182,113.4 Q 990.582,113.4 990.582,113.4 Q 990.582,113.4 1004.98,113.4 L 1186.22,113.4 L 1200.62,113.4"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
-<text x="1066.38" y="86.1837" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">Capacity Tier Copy</text>
+<svg xmlns='http://www.w3.org/2000/svg' style='font-size:initial;' viewBox="0 0 1544.54 1402.48" data-pikchr-date="20250319161943">
+<path d="M68.7777,344.509L327.978,344.509A14.4 14.4 0 0 0 342.378 330.109L342.378,186.109A14.4 14.4 0 0 0 327.978 171.709L68.7777,171.709A14.4 14.4 0 0 0 54.3777 186.109L54.3777,330.109A14.4 14.4 0 0 0 68.7777 344.509Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="198.378" y="221.821" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">vSphere VM</text>
+<text x="198.378" y="258.109" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">500TB</text>
+<text x="198.378" y="294.397" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
+<path d="M68.7777,589.309L327.978,589.309A14.4 14.4 0 0 0 342.378 574.909L342.378,430.909A14.4 14.4 0 0 0 327.978 416.509L68.7777,416.509A14.4 14.4 0 0 0 54.3777 430.909L54.3777,574.909A14.4 14.4 0 0 0 68.7777 589.309Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="198.378" y="466.621" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Veeam Agent Windows</text>
+<text x="198.378" y="502.909" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">100TB</text>
+<text x="198.378" y="539.197" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
+<path d="M68.7777,834.109L327.978,834.109A14.4 14.4 0 0 0 342.378 819.709L342.378,675.709A14.4 14.4 0 0 0 327.978 661.309L68.7777,661.309A14.4 14.4 0 0 0 54.3777 675.709L54.3777,819.709A14.4 14.4 0 0 0 68.7777 834.109Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="198.378" y="711.421" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Veeam Agent Linux</text>
+<text x="198.378" y="747.709" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">100TB</text>
+<text x="198.378" y="783.997" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">5%</text>
+<path d="M68.7777,1078.91L327.978,1078.91A14.4 14.4 0 0 0 342.378 1064.51L342.378,920.509A14.4 14.4 0 0 0 327.978 906.109L68.7777,906.109A14.4 14.4 0 0 0 54.3777 920.509L54.3777,1064.51A14.4 14.4 0 0 0 68.7777 1078.91Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="198.378" y="956.221" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Oracle RMAN</text>
+<text x="198.378" y="992.509" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">50TB</text>
+<text x="198.378" y="1028.8" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">10%</text>
+<path d="M68.7777,1323.71L327.978,1323.71A14.4 14.4 0 0 0 342.378 1309.31L342.378,1165.31A14.4 14.4 0 0 0 327.978 1150.91L68.7777,1150.91A14.4 14.4 0 0 0 54.3777 1165.31L54.3777,1309.31A14.4 14.4 0 0 0 68.7777 1323.71Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="198.378" y="1219.16" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">NAS</text>
+<text x="198.378" y="1255.45" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">1PB</text>
+<path d="M644.778,344.509L903.978,344.509A14.4 14.4 0 0 0 918.378 330.109L918.378,186.109A14.4 14.4 0 0 0 903.978 171.709L644.778,171.709A14.4 14.4 0 0 0 630.378 186.109L630.378,330.109A14.4 14.4 0 0 0 644.778 344.509Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="774.378" y="239.965" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Hardened Repo</text>
+<text x="774.378" y="276.253" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
+<path d="M644.778,1078.91L903.978,1078.91A14.4 14.4 0 0 0 918.378 1064.51L918.378,920.509A14.4 14.4 0 0 0 903.978 906.109L644.778,906.109A14.4 14.4 0 0 0 630.378 920.509L630.378,1064.51A14.4 14.4 0 0 0 644.778 1078.91Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="774.378" y="974.365" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Repo DB</text>
+<text x="774.378" y="1010.65" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
+<path d="M644.778,1323.71L903.978,1323.71A14.4 14.4 0 0 0 918.378 1309.31L918.378,1165.31A14.4 14.4 0 0 0 903.978 1150.91L644.778,1150.91A14.4 14.4 0 0 0 630.378 1165.31L630.378,1309.31A14.4 14.4 0 0 0 644.778 1323.71Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="774.378" y="1219.16" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Hardened Repo NAS</text>
+<text x="774.378" y="1255.45" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">10PB</text>
+<path d="M1220.78,344.509L1479.98,344.509A14.4 14.4 0 0 0 1494.38 330.109L1494.38,186.109A14.4 14.4 0 0 0 1479.98 171.709L1220.78,171.709A14.4 14.4 0 0 0 1206.38 186.109L1206.38,330.109A14.4 14.4 0 0 0 1220.78 344.509Z"  style="fill:rgb(0,209,95);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="1350.38" y="239.965" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">Vault</text>
+<text x="1350.38" y="276.253" text-anchor="middle" fill="rgb(255,255,255)" font-size="180%" dominant-baseline="central">350TB</text>
+<circle cx="339.6" cy="197.526" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="634.595,197.526 623.075,201.846 623.075,193.206" style="fill:rgb(80,88,97)"/>
+<path d="M339.6,197.526 L 404.4,197.526 Q 418.8,197.526 418.8,197.526 L 418.8,197.526 Q 418.8,197.526 433.2,197.526 L 614.435,197.526 L 628.835,197.526"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="394.55" y="170.31" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
+<circle cx="339.6" cy="463.926" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="634.595,219.126 623.075,223.446 623.075,214.806" style="fill:rgb(80,88,97)"/>
+<path d="M339.6,463.926 L 426,463.926 Q 440.4,463.926 440.4,449.526 L 440.4,233.526 Q 440.4,219.126 454.8,219.126 L 614.435,219.126 L 628.835,219.126"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="394.55" y="436.71" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">GOLD</text>
+<circle cx="339.6" cy="730.326" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="634.595,240.726 623.075,245.046 623.075,236.406" style="fill:rgb(80,88,97)"/>
+<path d="M339.6,730.326 L 447.6,730.326 Q 462,730.326 462,715.926 L 462,255.126 Q 462,240.726 476.4,240.726 L 614.435,240.726 L 628.835,240.726"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="408.236" y="703.11" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">SILVER</text>
+<circle cx="339.6" cy="931.926" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="634.595,931.926 623.075,936.246 623.075,927.606" style="fill:rgb(80,88,97)"/>
+<path d="M339.6,931.926 L 404.4,931.926 Q 418.8,931.926 418.8,931.926 L 418.8,931.926 Q 418.8,931.926 433.2,931.926 L 614.435,931.926 L 628.835,931.926"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="372.778" y="904.71" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">DB</text>
+<circle cx="339.6" cy="1176.73" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="634.595,1176.73 623.075,1181.05 623.075,1172.41" style="fill:rgb(80,88,97)"/>
+<path d="M339.6,1176.73 L 404.4,1176.73 Q 418.8,1176.73 418.8,1176.73 L 418.8,1176.73 Q 418.8,1176.73 433.2,1176.73 L 614.435,1176.73 L 628.835,1176.73"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="383.353" y="1149.51" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">NAS</text>
+<circle cx="915.6" cy="197.526" r="2.16" style="fill:rgb(80,88,97);stroke-width:2.16;stroke:rgb(80,88,97);" />
+<polygon points="1210.6,197.526 1199.08,201.846 1199.08,193.206" style="fill:rgb(80,88,97)"/>
+<path d="M915.6,197.526 L 980.4,197.526 Q 994.8,197.526 994.8,197.526 Q 994.8,197.526 1009.2,197.526 L 1190.44,197.526 L 1204.84,197.526"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1070.6" y="170.31" text-anchor="middle" fill="rgb(142,113,244)" font-size="180%" dominant-baseline="central">Capacity Tier Copy</text>
+<path d="M20.7777,1400.32L951.978,1400.32A14.4 14.4 0 0 0 966.378 1385.92L966.378,138.109A14.4 14.4 0 0 0 951.978 123.709L20.7777,123.709A14.4 14.4 0 0 0 6.37766 138.109L6.37766,1385.92A14.4 14.4 0 0 0 20.7777 1400.32Z"  style="fill:none;stroke-width:2.88;stroke:rgb(80,88,97);" />
+<path d="M345.258,126.589L627.498,126.589A2.88 2.88 0 0 0 630.378 123.709A2.88 2.88 0 0 0 627.498 120.829L345.258,120.829A2.88 2.88 0 0 0 342.378 123.709A2.88 2.88 0 0 0 345.258 126.589Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="486.378" y="123.709" text-anchor="middle" fill="rgb(80,88,97)" font-size="281.25%" dominant-baseline="central">Oslo</text>
+<path d="M1172.78,1400.32L1527.98,1400.32A14.4 14.4 0 0 0 1542.38 1385.92L1542.38,138.109A14.4 14.4 0 0 0 1527.98 123.709L1172.78,123.709A14.4 14.4 0 0 0 1158.38 138.109L1158.38,1385.92A14.4 14.4 0 0 0 1172.78 1400.32Z"  style="fill:none;stroke-width:2.88;stroke:rgb(80,88,97);" />
+<path d="M1209.26,126.589L1491.5,126.589A2.88 2.88 0 0 0 1494.38 123.709A2.88 2.88 0 0 0 1491.5 120.829L1209.26,120.829A2.88 2.88 0 0 0 1206.38 123.709A2.88 2.88 0 0 0 1209.26 126.589Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="1350.38" y="123.709" text-anchor="middle" fill="rgb(80,88,97)" font-size="281.25%" dominant-baseline="central">Vault</text>
+<path d="M16.56,147.312L271.221,147.312A14.4 14.4 0 0 0 285.621 132.912L285.621,16.56A14.4 14.4 0 0 0 271.221 2.16L16.56,2.16A14.4 14.4 0 0 0 2.16 16.56L2.16,132.912A14.4 14.4 0 0 0 16.56 147.312Z"  style="fill:none;stroke-width:0;stroke:rgb(80,88,97);" />
+<text x="7.344" y="33.912" text-anchor="start" fill="rgb(80,88,97)" font-size="225%" dominant-baseline="central">Design for x</text>
+<text x="7.344" y="74.736" text-anchor="start" fill="rgb(80,88,97)" font-size="180%" dominant-baseline="central">Date: 2025/07/11</text>
+<text x="7.344" y="111.024" text-anchor="start" fill="rgb(80,88,97)" font-size="180%" dominant-baseline="central"></text>
 </svg>

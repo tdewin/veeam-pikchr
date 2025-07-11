@@ -1,9 +1,13 @@
 boxwid = 2
-$o = 0.075
+boxht = 1.2
+$o = 0.15
 $radl = 0.1
 $i = 0
 $margin = boxwid/3
 
+$locborder = 0.02
+
+fontscale = 1.8
 
 //https://www.veeam.com/company/brand-resource-center.html
 $viridis = 0x00d15f
@@ -38,12 +42,12 @@ define arrowrepo {
 }
 
 define locbox {
-LOC: box width $1.width+$margin height $1.height+$margin with .c at $1.c fill none color $grey 
-box with .c at LOC.n fill white 
+LOC: box width $1.width+$margin height DIAGRAM.height+$margin with .n at $1.n+(0,$margin/2) fill none color $grey thickness $locborder 
+box with .c at LOC.n fill white ht $locborder*2
 text with .c at LOC.n color $grey $2 big big big big
 }
 
-
+DIAGRAM: [
 A: [
 down
 VM: box "vSphere VM" "500TB" "5%" 
@@ -56,21 +60,15 @@ ORA: box "Oracle RMAN" "50TB" "10%"
 move
 NAS: box "NAS" "1PB"
 
-
 REPO: box "Hardened Repo" "350TB"  with .w at VM.e+(boxwid,0)
 REPODB: box "Repo DB" "350TB" with .w at ORA.e+(boxwid,0)
 REPONAS: box "Hardened Repo NAS" "10PB" with .w at NAS.e+(boxwid,0)
 ]
 
-locbox(A,"Oslo")
-
 
 VAULTSITE: [
 VAULT: box "Vault" "350TB"
 ] with .nw at A.ne+($margin*3,0)
-
-locbox(VAULTSITE,"Vault")
-
 
 
 $i=1
@@ -86,6 +84,16 @@ arrowrepo(A.NAS,A.REPONAS,"NAS")
 
 $i=1
 arrowrepo(A.REPO,VAULTSITE.VAULT,"Capacity Tier Copy")
+]
+
+locbox(DIAGRAM.A,"Oslo")
+locbox(DIAGRAM.VAULTSITE,"Vault")
+
+
+box "Design for x" ljust big\
+    "Date: 2025/07/11" ljust\
+    "" ljust\
+  color $grey fill none thickness 0 with .sw at DIAGRAM.nw+(-$margin/2,0) fit
 
 //copy svg from https://pikchr.org/home/pikchrshow
 //pbpaste | rsvg-convert -o hld.png -a -s esbuild.css -
