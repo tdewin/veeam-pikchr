@@ -1,0 +1,91 @@
+boxwid = 2
+$o = 0.075
+$radl = 0.1
+$i = 0
+$margin = boxwid/3
+
+
+//https://www.veeam.com/company/brand-resource-center.html
+$viridis = 0x00d15f
+$lime = 0x9cffa3
+$mint = 0x32f26f
+$pine = 0x007f49
+$darkmineral = 0x505861
+$frenchgrey = 0xADACAF
+$fog = 0xf0f0f0
+$sol = 0xffd839
+$suma = 0xfe8a25
+$casia = 0x8e71f4
+$electricazure = 0x3700ff
+$sky = 0x57e0ff
+$ignis = 0xed2b3d
+
+$grey = $darkmineral
+$green = $viridis
+$policy = $casia
+
+fill = $green
+color = white
+
+boxrad = $radl
+
+define arrowrepo {
+ dot at $1.ne-(-0.01,$i*$o) color $grey
+ arrow -> from $1.ne-(-0.01,$i*$o) right boxwid/5+$i*$o \
+ then up until even with $2.nw-(0,$i*$o)\
+ then to $2.nw-(0,$i*$o) rad $radl color $grey; $i += 1
+ text with .sw at 1st vertex of previous arrow $3 color $policy
+}
+
+define locbox {
+LOC: box width $1.width+$margin height $1.height+$margin with .c at $1.c fill none color $grey 
+box with .c at LOC.n fill white 
+text with .c at LOC.n color $grey $2 big big big big
+}
+
+
+A: [
+down
+VM: box "vSphere VM" "500TB" "5%" 
+move
+VAW: box "Veeam Agent Windows" "100TB" "5%"
+move
+VAL: box "Veeam Agent Linux" "100TB" "5%"
+move
+ORA: box "Oracle RMAN" "50TB" "10%"
+move
+NAS: box "NAS" "1PB"
+
+
+REPO: box "Hardened Repo" "350TB"  with .w at VM.e+(boxwid,0)
+REPODB: box "Repo DB" "350TB" with .w at ORA.e+(boxwid,0)
+REPONAS: box "Hardened Repo NAS" "10PB" with .w at NAS.e+(boxwid,0)
+]
+
+locbox(A,"Oslo")
+
+
+VAULTSITE: [
+VAULT: box "Vault" "350TB"
+] with .nw at A.ne+($margin*3,0)
+
+locbox(VAULTSITE,"Vault")
+
+
+
+$i=1
+arrowrepo(A.VM,A.REPO,"GOLD")
+arrowrepo(A.VAW,A.REPO,"GOLD")
+arrowrepo(A.VAL,A.REPO,"SILVER")
+
+$i=1
+arrowrepo(A.ORA,A.REPODB,"DB")
+
+$i=1
+arrowrepo(A.NAS,A.REPONAS,"NAS")
+
+$i=1
+arrowrepo(A.REPO,VAULTSITE.VAULT,"Capacity Tier Copy")
+
+//copy svg from https://pikchr.org/home/pikchrshow
+//pbpaste | rsvg-convert -o hld.png -a -s esbuild.css -
