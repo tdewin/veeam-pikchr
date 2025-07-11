@@ -1,0 +1,49 @@
+fontscale = 1.2
+
+
+$grey = 0x505861
+$green = 0x00d15f
+
+$shift = 0.70
+$col = $shift*1.5
+$rad = $shift/3
+$m = 3.5
+$ra = 0.1
+
+
+$offset = 0.15
+
+
+SM:  box width $col rad $rad fill $green color white "M365" "Data" 
+SE:  box same as SM "Exchange" "On Premises"  at $shift south of SM
+SS:  box same as SM "Sharepoint" "On Premises" at $shift south of SE
+
+P:   box rad $rad width $col*1.2 height $shift*3  at $shift*$m right of SE fill $grey color 0xffffff 
+     text at $shift*1.3 north of P  "Proxy" big color white
+
+SMP: text "443" small bold color $grey with .w at  P.w - ($shift,-$offset)
+SEP: text "443" small bold same as SMP with .w at  P.w - ($shift,0)
+SSP: text "5985" small bold same as SMP with .w at P.w - ($shift,$offset)
+
+
+     line from SM.e right $offset then to SMP.w - ($offset,0) then to SMP.w color $grey rad $ra
+     arrow -> from SMP.e to P.w - (0,-$offset) color $grey rad $ra
+
+     line from SE.e right $offset then to SEP.w - ($offset,0) then to SEP.w color $grey rad $ra
+     arrow -> from SEP.e to P.w color $grey rad $ra
+
+     line from SS.e right $offset then to SSP.w - ($offset,0) then to SSP.w color $grey rad $ra
+     arrow -> from SSP.e to P.w - (0,$offset) color $grey rad $ra
+
+PS:  box same as SM "Service" at 0 right of P
+PC:  box same as SM "Local" "Cache" at $shift south of PS
+     arrow <-> from PS.s to PC.n color white
+
+
+     line from P.e color $grey width $shift/4
+OSP: text "443" small bold same as SMP
+     line width $shift/3 invisible 
+OS:  box same as SM "Object Storage" 
+
+     arrow -> from OSP.e to OS.w color $grey
+
