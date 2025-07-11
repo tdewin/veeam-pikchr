@@ -21,29 +21,37 @@ SS:  box same as SM "Sharepoint" "On Premises" at $shift south of SE
 P:   box rad $rad width $col*1.2 height $shift*3  at $shift*$m right of SE fill $grey color 0xffffff 
      text at $shift*1.3 north of P  "Proxy" big color white
 
-SMP: text "443" small bold color $grey with .w at  P.w - ($shift,-$offset)
-SEP: text "443" small bold same as SMP with .w at  P.w - ($shift,0)
-SSP: text "5985" small bold same as SMP with .w at P.w - ($shift,$offset)
+SMP: text "443" small bold color $grey with .w at  SM.e +($offset,0)
+SEP: text "443" small bold same as SMP with .w at  SE.e +($offset,0)
+SSP: text "5985" small bold same as SMP with .w at SS.e +($offset,0)
 
 
-     line from SM.e right $offset then to SMP.w - ($offset,0) then to SMP.w color $grey rad $ra
-     arrow -> from SMP.e to P.w - (0,-$offset) color $grey rad $ra
+     arrow <- from SM.e to SMP.w color $grey rad $ra
+     line from SMP.e right $offset*$m \
+        then to P.w - (-$offset,-$offset) then right $ra color $grey rad $ra
+    
+     arrow <- from SE.e to SEP.w color $grey rad $ra
+     line from SEP.e right $offset*$m \
+        then to P.w - (-$offset,0) then right $offset color $grey rad $ra
 
-     line from SE.e right $offset then to SEP.w - ($offset,0) then to SEP.w color $grey rad $ra
-     arrow -> from SEP.e to P.w color $grey rad $ra
+     arrow <- from SS.e to SSP.w color $grey rad $ra
+     line from SSP.e  right $offset*$m \
+        then to P.w - (-$offset,$offset) color $grey rad $ra
 
-     line from SS.e right $offset then to SSP.w - ($offset,0) then to SSP.w color $grey rad $ra
-     arrow -> from SSP.e to P.w - (0,$offset) color $grey rad $ra
+OSL: line from P.e - ($offset,0) color $grey width $shift
+
 
 PS:  box same as SM "Service" at 0 right of P
 PC:  box same as SM "Local" "Cache" at $shift south of PS
      arrow <-> from PS.s to PC.n color white
 
 
-     line from P.e color $grey width $shift/4
-OSP: text "443" small bold same as SMP
+right
+
+     
+OSP: text "443" small bold same as SMP with .w at OSL.e 
      line width $shift/3 invisible 
-OS:  box same as SM "Object Storage" 
+OS:  box same as SM "Object Storage"
 
      arrow -> from OSP.e to OS.w color $grey
 
