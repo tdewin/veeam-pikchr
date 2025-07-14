@@ -55,11 +55,16 @@ OPEX: box "On-premises Microsoft" "Exchange server"  color $casia
 move to VWEB.e
 right
 move $colsplit
-VBO: box "Veeam Backup for Microsoft 365 server"
+VBO: box "Veeam Backup for" "Microsoft 365 server"
 
 down
 move
 CON: box "Console" rad 0.3 wid boxwid/2
+
+right
+move 2
+SMTP: box "SMTP" wid boxwid/3
+move to CON.s
 
 down
 move
@@ -100,7 +105,10 @@ OS: box "Object Storage" color $suma
 move to Proxy.ne
 down;move;move
 right;move
-REMOTEPROXY: box "Proxy Move" 
+REMOTEPROXY: box "Proxy (Migrate Data)" 
+
+
+
 
 //connnections
 //VBO
@@ -114,7 +122,7 @@ define vboconnection {
  porttext($2)
  $i+= 1
 }
-vboconnection(VWEB.e,"443")
+vboconnection(VWEB.e,"443" "80")
 vboconnection(M365.e,"443")
 vboconnection(OPSP.e,"5986" "5985")
 vboconnection(OPEX.e,"80" "443")
@@ -141,10 +149,16 @@ define proxyconnection {
 
 proxyconnection(NATS.e,"4222")
 proxyconnection(PG.e,"5432")
-proxyconnection(VBO.e,"9191"
-)
-arrow from Proxy.e then right until even with OS.s then to OS.s color $grey  rad $rad
+proxyconnection(VBO.e,"9191")
+proxyconnection(SMTP.w,"25" "or 465" "or 587")
+
+MIDP: dot with .c at 3rd vertex of previous arrow invis
+arrow from VBO.ne-(0,$o*2.5) right until even with MIDP then down until even with SMTP.w then to SMTP.w color $grey rad $rad
+
+arrow from Proxy.ne-(0,$o*$i) then right until even with OS.s then to OS.s color $grey  rad $rad
 text "443" with .nw at  3rd vertex of previous color $grey
+
+
 
 arrow from Proxy.se+(0,$o) then right until even with REMOTEPROXY.n then to REMOTEPROXY.n color $grey  rad $rad
 text "9193" with .sw at  3rd vertex of previous color $grey
@@ -158,7 +172,9 @@ $i = 0.5
 proxyconnectionsource(OPEX.w,"80" "443")
 proxyconnectionsource(OPSP.w,"5986" "5985")
 proxyconnectionsource(M365.w,"443")
-proxyconnectionsource(VWEB.w,"443")
+proxyconnectionsource(VWEB.w,"443" "80")
+
+
 
 //rest
 arrow from B.s then down 0.1 then left until even with VBO.n+($o,0) then to VBO.n+($o,0)  color $grey  rad $rad

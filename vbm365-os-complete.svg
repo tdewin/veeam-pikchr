@@ -11,9 +11,12 @@
 <text x="350.16" y="696.87" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">On-premises Microsoft</text>
 <text x="350.16" y="717.03" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">Exchange server</text>
 <path d="M710.16,310.95L998.16,310.95L998.16,238.95L710.16,238.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
-<text x="854.16" y="274.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Veeam Backup for Microsoft 365 server</text>
+<text x="854.16" y="264.87" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Veeam Backup for</text>
+<text x="854.16" y="285.03" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Microsoft 365 server</text>
 <path d="M818.16,454.95L890.16,454.95A36 36 0 0 0 926.16 418.95A36 36 0 0 0 890.16 382.95L818.16,382.95A36 36 0 0 0 782.16 418.95A36 36 0 0 0 818.16 454.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
 <text x="854.16" y="418.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Console</text>
+<path d="M1214.16,454.95L1310.16,454.95L1310.16,382.95L1214.16,382.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="1262.16" y="418.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">SMTP</text>
 <path d="M806.16,537.75L806.16,588.15A48 10.8 0 0 0 902.16 588.15L902.16,537.75A48 10.8 0 0 0 806.16 537.75A48 10.8 0 0 0 902.16 537.75"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
 <text x="854.16" y="571.05" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Postgres</text>
 <path d="M806.16,778.95L902.16,778.95L902.16,692.55L880.56,670.95L806.16,670.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
@@ -28,10 +31,11 @@
 <path d="M1214.16,310.95L1502.16,310.95L1502.16,238.95L1214.16,238.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(254,138,37);" />
 <text x="1358.16" y="274.95" text-anchor="middle" fill="rgb(254,138,37)" dominant-baseline="central">Object Storage</text>
 <path d="M1070.16,1030.95L1358.16,1030.95L1358.16,958.95L1070.16,958.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
-<text x="1214.16" y="994.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Proxy Move</text>
+<text x="1214.16" y="994.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Proxy (Migrate Data)</text>
 <polygon points="494.16,274.95 505.68,270.63 505.68,279.27" style="fill:rgb(80,88,97)"/>
 <path d="M710.16,244.093 L 561.703,244.093 Q 547.303,244.093 547.303,258.493 L 547.303,260.55 Q 547.303,274.95 532.903,274.95 L 514.32,274.95 L 499.92,274.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="515.417" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<text x="515.417" y="310.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">80</text>
 <polygon points="494.16,418.95 505.68,414.63 505.68,423.27" style="fill:rgb(80,88,97)"/>
 <path d="M710.16,254.379 L 571.989,254.379 Q 557.589,254.379 557.589,268.779 L 557.589,404.55 Q 557.589,418.95 543.189,418.95 L 514.32,418.95 L 499.92,418.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="519.531" y="434.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
@@ -69,8 +73,15 @@
 <polygon points="998.16,274.95 1009.68,270.63 1009.68,279.27" style="fill:rgb(80,88,97)"/>
 <path d="M998.16,876.664 L 1084.9,876.664 Q 1099.3,876.664 1099.3,862.264 L 1099.3,289.35 Q 1099.3,274.95 1084.9,274.95 L 1018.32,274.95 L 1003.92,274.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="1038.62" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9191</text>
+<polygon points="1214.16,418.95 1202.64,423.27 1202.64,414.63" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,886.95 L 1095.19,886.95 Q 1109.59,886.95 1109.59,872.55 L 1109.59,433.35 Q 1109.59,418.95 1123.99,418.95 L 1194,418.95 L 1208.4,418.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1172.33" y="434.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">25</text>
+<text x="1172.33" y="454.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">or 465</text>
+<text x="1172.33" y="474.39" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">or 587</text>
+<polygon points="1214.16,418.95 1202.64,423.27 1202.64,414.63" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,264.664 L 1095.19,264.664 Q 1109.59,264.664 1109.59,279.064 L 1109.59,404.55 Q 1109.59,418.95 1123.99,418.95 L 1194,418.95 L 1208.4,418.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <polygon points="1358.16,310.95 1362.48,322.47 1353.84,322.47" style="fill:rgb(80,88,97)"/>
-<path d="M998.16,886.95 L 1343.76,886.95 Q 1358.16,886.95 1358.16,872.55 L 1358.16,331.11 L 1358.16,316.71"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<path d="M998.16,897.236 L 1343.76,897.236 Q 1358.16,897.236 1358.16,882.836 L 1358.16,331.11 L 1358.16,316.71"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="1379.64" y="326.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
 <polygon points="1214.16,958.95 1209.84,947.43 1218.48,947.43" style="fill:rgb(80,88,97)"/>
 <path d="M998.16,912.664 L 1199.76,912.664 Q 1214.16,912.664 1214.16,927.064 L 1214.16,938.79 L 1214.16,953.19"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
@@ -89,6 +100,7 @@
 <polygon points="206.16,274.95 194.64,279.27 194.64,270.63" style="fill:rgb(80,88,97)"/>
 <path d="M746.16,922.95 L 746.16,992.55 Q 746.16,1006.95 731.76,1006.95 L 220.56,1006.95 Q 206.16,1006.95 191.76,1006.95 L 88.56,1006.95 Q 74.16,1006.95 74.16,992.55 L 74.16,289.35 Q 74.16,274.95 88.56,274.95 L 186,274.95 L 200.4,274.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="153.36" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<text x="153.36" y="310.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">80</text>
 <polygon points="864.446,238.95 860.126,227.43 868.766,227.43" style="fill:rgb(80,88,97)"/>
 <path d="M998.16,166.95 L 998.16,174.15 Q 998.16,181.35 983.76,181.35 L 878.846,181.35 Q 864.446,181.35 864.446,195.75 L 864.446,218.79 L 864.446,233.19"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
 <text x="891.172" y="223.83" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">4443</text>
