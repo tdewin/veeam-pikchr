@@ -57,7 +57,7 @@ OPEX: box "On-premises Microsoft" "Exchange server"  color $casia
 move to VWEB.e
 right
 move $colsplit
-VBO: box "Veeam Backup for" "Microsoft 365 server"
+VBO: box "Veeam Backup for" "Microsoft 365 server" ht 150%
 
 down
 move
@@ -110,15 +110,12 @@ boxwid=$defbox
 
 
 //Object Storage
-move to VBO.e
 
-right
-move 300%
 
-OS: box "Object Storage" color $suma 
+OS: box "Object Storage" color $suma with .n at VBO.n+(3.5,0)
 
-move to PROXY.ne
-down;move;move;move
+move to PROXY.se
+down;move;
 right;move
 REMOTEPROXY: box "Proxy (Migrate Data)" 
 
@@ -220,7 +217,3 @@ DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
 //box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
 
 box with .nw at DIABOX.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
-
-
-
-
