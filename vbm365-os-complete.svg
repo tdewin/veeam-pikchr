@@ -15,8 +15,8 @@
 <text x="854.16" y="285.03" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Microsoft 365 server</text>
 <path d="M818.16,454.95L890.16,454.95A36 36 0 0 0 926.16 418.95A36 36 0 0 0 890.16 382.95L818.16,382.95A36 36 0 0 0 782.16 418.95A36 36 0 0 0 818.16 454.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
 <text x="854.16" y="418.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Console</text>
-<path d="M1214.16,454.95L1310.16,454.95L1310.16,382.95L1214.16,382.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
-<text x="1262.16" y="418.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">SMTP</text>
+<path d="M1214.16,454.95L1310.16,454.95L1310.16,382.95L1214.16,382.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(142,113,244);" />
+<text x="1262.16" y="418.95" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">SMTP</text>
 <path d="M806.16,537.75L806.16,588.15A48 10.8 0 0 0 902.16 588.15L902.16,537.75A48 10.8 0 0 0 806.16 537.75A48 10.8 0 0 0 902.16 537.75"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
 <text x="854.16" y="571.05" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Postgres</text>
 <path d="M806.16,778.95L902.16,778.95L902.16,692.55L880.56,670.95L806.16,670.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
