@@ -64,6 +64,7 @@ CON: box "Console" rad 0.3 wid boxwid/2
 right
 move 2
 SMTP: box "SMTP" wid boxwid/3  color $casia
+line from SMTP.nw to SMTP.n-(0,boxht/4) then to SMTP.ne color $casia
 move to CON.s
 
 down
@@ -72,12 +73,17 @@ PG: cylinder "Postgres" wid boxwid/3
 
 down 
 move
-NATS: file "NATS"  wid boxwid/3
+NATS: box "NATS"  wid boxwid/3
+line from NATS.nw to NATS.n-(0,boxht/4) then to NATS.ne
+move to NATS.s
 
 down
 move
-PROXY: box "Proxy"
+PROXY: box height 120%
+text "Proxy" with .n at previous box.c
 
+cylinder "Cache" ht 90% wid 90% with .s at previous box.c+(-boxwid/4,0) fill white
+cylinder "Local Repo" ht 90% wid 90% with .s at previous box.c+(boxwid/4,0) fill white
 
 boxwid = $defbox/1.25
 move to VBO.ne
@@ -102,7 +108,7 @@ move 300%
 
 OS: box "Object Storage" color $suma 
 
-move to Proxy.ne
+move to PROXY.ne
 down;move;move
 right;move
 REMOTEPROXY: box "Proxy (Migrate Data)" 
@@ -142,7 +148,7 @@ text "443" with .ne at 2nd vertex of previous  color $grey
 //proxy
 $i = 0.5
 define proxyconnection {
- arrow from Proxy.ne-(0,$o*$i) right $o*5+$diff-$o*($max-$i) then up until even with $1 then to $1 color $grey  rad $rad
+ arrow from PROXY.ne-(0,$o*$i) right $o*5+$diff-$o*($max-$i) then up until even with $1 then to $1 color $grey  rad $rad
  porttext($2)
  $i+= 1
 }
@@ -155,16 +161,16 @@ proxyconnection(SMTP.w,"25" "or 465" "or 587")
 MIDP: dot with .c at 3rd vertex of previous arrow invis
 arrow from VBO.ne-(0,$o*2.5) right until even with MIDP then down until even with SMTP.w then to SMTP.w color $grey rad $rad
 
-arrow from Proxy.ne-(0,$o*$i) then right until even with OS.s then to OS.s color $grey  rad $rad
+arrow from PROXY.ne-(0,$o*$i) then right until even with OS.s then to OS.s color $grey  rad $rad
 text "443" with .nw at  3rd vertex of previous color $grey
 
 
 
-arrow from Proxy.se+(0,$o) then right until even with REMOTEPROXY.n then to REMOTEPROXY.n color $grey  rad $rad
+arrow from PROXY.se+(0,$o) then right until even with REMOTEPROXY.n then to REMOTEPROXY.n color $grey  rad $rad
 text "9193" with .sw at  3rd vertex of previous color $grey
 
 define proxyconnectionsource {
- arrow from Proxy.sw+($o*$i,0) down $diff/2+($o*$i) then left until even with $1 then left $diff+$o*$i then up until even with $1 then to $1 color $grey  rad $rad
+ arrow from PROXY.sw+($o*$i,0) down $diff/2+($o*$i) then left until even with $1 then left $diff+$o*$i then up until even with $1 then to $1 color $grey  rad $rad
  text $2 with .n at 0.6 way between 5th vertex of previous and 6th vertex of previous   color $grey 
  $i+= 1
 }
@@ -191,7 +197,7 @@ arrow from R.w left until even with M365.w-($diff,0) then down until even with V
 text with .sw at previous.s "443 login" color $grey
 ]
 
-C: box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c color $grey rad 0.1
+C: box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c behind DIA.VWEB color $grey rad 0.1
 box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
 text with .c at previous.c color $grey "Veeam Backup for Office 365" big big big big bold
 box with .nw at C.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $grey wid C.width invis ht boxht/2
