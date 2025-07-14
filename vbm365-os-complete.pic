@@ -19,6 +19,8 @@ $green = $viridis
 $policy = $casia
 
 color = $green
+//font scale 1.6 works with conversion to ES Build
+fontscale = 1.6
 
 //END VEEAM PREAMBLE
 
@@ -59,31 +61,38 @@ VBO: box "Veeam Backup for" "Microsoft 365 server"
 
 down
 move
-CON: box "Console" rad 0.3 wid boxwid/2
+CON: box "Console" rad 0.1 wid boxwid/2
+line from CON.se-(0,boxht/7) to CON.sw-(0,boxht/7) thickness 0.03
+move to CON.e
 
 right
 move 2
-SMTP: box "SMTP" wid boxwid/3  color $casia
+SMTP: box wid boxwid/3  color $casia
 line from SMTP.nw to SMTP.n-(0,boxht/4) then to SMTP.ne color $casia
+text "SMTP" with .n at previous.s color $casia
 move to CON.s
 
 down
 move
-PG: cylinder "Postgres" wid boxwid/3
+PG: cylinder "Postgres" wid boxwid/2
 
 down 
 move
-NATS: box "NATS"  wid boxwid/3
+NATS: box wid boxwid/2
 line from NATS.nw to NATS.n-(0,boxht/4) then to NATS.ne
+text "NATS" with .n at previous.s 
 move to NATS.s
 
 down
-move
-PROXY: box height 120%
-text "Proxy" with .n at previous box.c
 
-cylinder "Cache" ht 90% wid 90% with .s at previous box.c+(-boxwid/4,0) fill white
-cylinder "Local Repo" ht 90% wid 90% with .s at previous box.c+(boxwid/4,0) fill white
+$sl = 150
+
+move
+PROXY: box height ($sl*1.6)%
+text "Proxy" with .n at previous box.n
+
+
+CACHE: cylinder "Local Repo" "or Cache"  ht $sl% wid $sl% with .s at previous box.s +(0,boxht/8)
 
 boxwid = $defbox/1.25
 move to VBO.ne
@@ -109,7 +118,7 @@ move 300%
 OS: box "Object Storage" color $suma 
 
 move to PROXY.ne
-down;move;move
+down;move;move;move
 right;move
 REMOTEPROXY: box "Proxy (Migrate Data)" 
 
@@ -193,14 +202,24 @@ arrow from B.w to R.e color $grey dashed ""
 text "uses" with .n at previous.s color $grey
 
 //master of complexity :D
-arrow from R.w left until even with M365.w-($diff,0) then down until even with VWEB.c+(0,$o/2) then right $o then down $o then left $o then down until even with M365.n+(0,$diff/2) then right until even with M365.n then to M365.n color $grey  rad $rad
+arrow from R.w left until even with M365.w-($diff,0) then down until even with VWEB.c+(0,$o/2) then right $o then down $o then left $o then down until even with M365.n+(0,$diff/3) then right until even with M365.n then to M365.n color $grey  rad $rad
 text with .sw at previous.s "443 login" color $grey
 ]
 
-C: box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c behind DIA.VWEB color $grey rad 0.1
-box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
-text with .c at previous.c color $grey "Veeam Backup for Office 365" big big big big bold
-box with .nw at C.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $grey wid C.width invis ht boxht/2
+C: dot at DIA.n+(0,boxht/2) invis
+T: box with .c at previous.c color $grey "Veeam Backup for Office 365" big big big big bold fit invis
+
+$mg = 0.3
+DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
+ down until even with DIA.sw -(0,$mg) then\
+ right until even with DIA.se +($mg,0) then\
+ up until even with T.e then \
+ left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
+
+//box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c behind DIA.VWEB color $grey rad 0.1
+//box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
+
+box with .nw at DIABOX.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
 
 
 
