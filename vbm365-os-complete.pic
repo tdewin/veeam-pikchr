@@ -1,0 +1,184 @@
+//VEEAM PREAMBLE
+//https://www.veeam.com/company/brand-resource-center.html
+$viridis = 0x00d15f
+$lime = 0x9cffa3
+$mint = 0x32f26f
+$pine = 0x007f49
+$darkmineral = 0x505861
+$frenchgrey = 0xADACAF
+$fog = 0xf0f0f0
+$sol = 0xffd839
+$suma = 0xfe8a25
+$casia = 0x8e71f4
+$electricazure = 0x3700ff
+$sky = 0x57e0ff
+$ignis = 0xed2b3d
+
+$grey = $darkmineral
+$green = $viridis
+$policy = $casia
+
+color = $green
+
+//END VEEAM PREAMBLE
+
+
+$f5=0.05
+$colsplit = 1.5
+$defbox = 2
+$max=7
+$o = boxht/$max
+$diff = $defbox/3
+
+scale=1
+boxwid=$defbox
+
+
+DIA:[
+down
+//External sources
+
+VWEB: box "*.veeam.com" 
+move
+
+
+//workloads
+M365: box "Microsoft Exchange Online" "Microsoft SharePoint Online" color $casia
+move
+OPSP: box "On-premises Microsoft" "SharePoint server"  color $casia
+move
+OPEX: box "On-premises Microsoft" "Exchange server"  color $casia
+
+
+//Veeam stack
+move to VWEB.e
+right
+move $colsplit
+VBO: box "Veeam Backup for Microsoft 365 server"
+
+down
+move
+CON: box "Console" rad 0.3 wid boxwid/2
+
+down
+move
+PG: cylinder "Postgres" wid boxwid/3
+
+down 
+move
+NATS: file "NATS"  wid boxwid/3
+
+down
+move
+PROXY: box "Proxy"
+
+
+boxwid = $defbox/1.25
+move to VBO.ne
+up
+move
+
+B: box "Restore Portal" color $sky
+
+move to VBO.nw
+move
+
+R: box "REST Integration" color $sky
+
+boxwid=$defbox
+
+
+//Object Storage
+move to VBO.e
+
+right
+move 300%
+
+OS: box "Object Storage" color $suma 
+
+move to Proxy.ne
+down;move;move
+right;move
+REMOTEPROXY: box "Proxy Move" 
+
+//connnections
+//VBO
+$i=0.5
+define porttext {
+ text $1 with .n at 0.6 way between 3rd vertex of previous and 4th vertex of previous   color $grey
+ //text $1 with .n at 4th vertex of previous -((this.n.x-previous.n.x)/1.8,0)   color $grey
+}
+define vboconnection {
+ arrow from VBO.nw-(0,$o*$i) left $diff+$o*($max-$i) then down until even with $1 then to $1 color $grey
+ porttext($2)
+ $i+= 1
+}
+vboconnection(VWEB.e,"443")
+vboconnection(M365.e,"443")
+vboconnection(OPSP.e,"5986" "5985")
+vboconnection(OPEX.e,"80" "443")
+vboconnection(PROXY.w,"9193" "445 Win" "22 Lin")
+
+
+vboconnection(NATS.w,"4222")
+vboconnection(PG.w,"5432")
+
+arrow from CON.n to VBO.s color $grey
+text "9191" with .nw at previous.end color $grey
+
+arrow from VBO.ne-(0,$o) to OS.nw-(0,$o) color $grey
+text "443" with .ne at 2nd vertex of previous  color $grey
+
+
+//proxy
+$i = 0.5
+define proxyconnection {
+ arrow from Proxy.ne-(0,$o*$i) right $o*5+$diff-$o*($max-$i) then up until even with $1 then to $1 color $grey
+ porttext($2)
+ $i+= 1
+}
+
+proxyconnection(NATS.e,"4222")
+proxyconnection(PG.e,"5432")
+proxyconnection(VBO.e,"9191"
+)
+arrow from Proxy.e then right until even with OS.s then to OS.s color $grey
+text "443" with .nw at  3rd vertex of previous color $grey
+
+arrow from Proxy.se+(0,$o) then right until even with REMOTEPROXY.n then to REMOTEPROXY.n color $grey
+text "9193" with .sw at  3rd vertex of previous color $grey
+
+define proxyconnectionsource {
+ arrow from Proxy.sw+($o*$i,0) down $diff/2+($o*$i) then left until even with $1 then left $diff+$o*$i then up until even with $1 then to $1 color $grey
+ text $2 with .n at 0.6 way between 5th vertex of previous and 6th vertex of previous   color $grey
+ $i+= 1
+}
+$i = 0.5
+proxyconnectionsource(OPEX.w,"80" "443")
+proxyconnectionsource(OPSP.w,"5986" "5985")
+proxyconnectionsource(M365.w,"443")
+proxyconnectionsource(VWEB.w,"443")
+
+//rest
+arrow from B.s then down 0.1 then left until even with VBO.n+($o,0) then to VBO.n+($o,0)  color $grey
+text "4443" with .sw at 4th vertex of previous color $grey
+
+arrow from R.s then down 0.1 then right until even with VBO.n-($o,0) then to VBO.n-($o,0)  color $grey
+text "9194" with .se at 4th vertex of previous color $grey
+
+arrow from B.w to R.e color $grey dashed ""
+text "uses" with .n at previous.s color $grey
+
+//master of complexity :D
+arrow from R.w left until even with M365.w-($diff,0) then down until even with VWEB.c+(0,$o/2) then right $o then down $o then left $o then down until even with M365.n+(0,$diff/2) then right until even with M365.n then to M365.n color $grey
+text with .sw at previous.s "443 login" color $grey
+]
+
+C: box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c color $grey rad 0.1
+box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
+text with .c at previous.c color $grey "Veeam Backup for Office 365" big big big big bold
+box with .nw at C.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $grey wid C.width invis ht boxht/2
+
+
+
+

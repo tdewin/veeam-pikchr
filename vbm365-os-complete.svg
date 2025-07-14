@@ -1,0 +1,109 @@
+<svg xmlns='http://www.w3.org/2000/svg' style='font-size:initial;' viewBox="0 0 1576.32 1126.96" data-pikchr-date="20250319161943">
+<path d="M206.16,310.95L494.16,310.95L494.16,238.95L206.16,238.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="350.16" y="274.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">*.veeam.com</text>
+<path d="M206.16,454.95L494.16,454.95L494.16,382.95L206.16,382.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(142,113,244);" />
+<text x="350.16" y="408.87" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">Microsoft Exchange Online</text>
+<text x="350.16" y="429.03" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">Microsoft SharePoint Online</text>
+<path d="M206.16,598.95L494.16,598.95L494.16,526.95L206.16,526.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(142,113,244);" />
+<text x="350.16" y="552.87" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">On-premises Microsoft</text>
+<text x="350.16" y="573.03" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">SharePoint server</text>
+<path d="M206.16,742.95L494.16,742.95L494.16,670.95L206.16,670.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(142,113,244);" />
+<text x="350.16" y="696.87" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">On-premises Microsoft</text>
+<text x="350.16" y="717.03" text-anchor="middle" fill="rgb(142,113,244)" dominant-baseline="central">Exchange server</text>
+<path d="M710.16,310.95L998.16,310.95L998.16,238.95L710.16,238.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="854.16" y="274.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Veeam Backup for Microsoft 365 server</text>
+<path d="M818.16,454.95L890.16,454.95A36 36 0 0 0 926.16 418.95A36 36 0 0 0 890.16 382.95L818.16,382.95A36 36 0 0 0 782.16 418.95A36 36 0 0 0 818.16 454.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="854.16" y="418.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Console</text>
+<path d="M806.16,537.75L806.16,588.15A48 10.8 0 0 0 902.16 588.15L902.16,537.75A48 10.8 0 0 0 806.16 537.75A48 10.8 0 0 0 902.16 537.75"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="854.16" y="571.05" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Postgres</text>
+<path d="M806.16,778.95L902.16,778.95L902.16,692.55L880.56,670.95L806.16,670.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<path d="M880.56,670.95L880.56,692.55L902.16,692.55"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="854.16" y="724.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">NATS</text>
+<path d="M710.16,922.95L998.16,922.95L998.16,850.95L710.16,850.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="854.16" y="886.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Proxy</text>
+<path d="M882.96,166.95L1113.36,166.95L1113.36,94.95L882.96,94.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="998.16" y="130.95" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">Restore Portal</text>
+<path d="M594.96,166.95L825.36,166.95L825.36,94.95L594.96,94.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(87,224,255);" />
+<text x="710.16" y="130.95" text-anchor="middle" fill="rgb(87,224,255)" dominant-baseline="central">REST Integration</text>
+<path d="M1214.16,310.95L1502.16,310.95L1502.16,238.95L1214.16,238.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(254,138,37);" />
+<text x="1358.16" y="274.95" text-anchor="middle" fill="rgb(254,138,37)" dominant-baseline="central">Object Storage</text>
+<path d="M1070.16,1030.95L1358.16,1030.95L1358.16,958.95L1070.16,958.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,209,95);" />
+<text x="1214.16" y="994.95" text-anchor="middle" fill="rgb(0,209,95)" dominant-baseline="central">Proxy Move</text>
+<polygon points="494.16,274.95 505.68,270.63 505.68,279.27" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,244.093L547.303,244.093L547.303,274.95L499.92,274.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="515.417" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="494.16,418.95 505.68,414.63 505.68,423.27" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,254.379L557.589,254.379L557.589,418.95L499.92,418.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="519.531" y="434.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="494.16,562.95 505.68,558.63 505.68,567.27" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,264.664L567.874,264.664L567.874,562.95L499.92,562.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="523.646" y="578.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5986</text>
+<text x="523.646" y="598.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5985</text>
+<polygon points="494.16,706.95 505.68,702.63 505.68,711.27" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,274.95L578.16,274.95L578.16,706.95L499.92,706.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="527.76" y="722.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">80</text>
+<text x="527.76" y="742.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="710.16,886.95 698.64,891.27 698.64,882.63" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,285.236L588.446,285.236L588.446,886.95L704.4,886.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="661.474" y="902.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9193</text>
+<text x="661.474" y="922.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">445 Win</text>
+<text x="661.474" y="942.39" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">22 Lin</text>
+<polygon points="806.16,724.95 794.64,729.27 794.64,720.63" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,295.521L598.731,295.521L598.731,724.95L800.4,724.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="723.189" y="740.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">4222</text>
+<polygon points="806.16,562.95 794.64,567.27 794.64,558.63" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,305.807L609.017,305.807L609.017,562.95L800.4,562.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="727.303" y="578.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5432</text>
+<polygon points="854.16,310.95 858.48,322.47 849.84,322.47" style="fill:rgb(80,88,97)"/>
+<path d="M854.16,382.95L854.16,316.71"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="880.886" y="326.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9191</text>
+<polygon points="1214.16,249.236 1202.64,253.556 1202.64,244.916" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,249.236L1208.4,249.236"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<text x="1192.68" y="264.356" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="902.16,724.95 913.68,720.63 913.68,729.27" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,856.093L1078.73,856.093L1078.73,724.95L907.92,724.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="972.789" y="740.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">4222</text>
+<polygon points="902.16,562.95 913.68,558.63 913.68,567.27" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,866.379L1089.02,866.379L1089.02,562.95L907.92,562.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="976.903" y="578.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5432</text>
+<polygon points="998.16,274.95 1009.68,270.63 1009.68,279.27" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,876.664L1099.3,876.664L1099.3,274.95L1003.92,274.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1038.62" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9191</text>
+<polygon points="1358.16,310.95 1362.48,322.47 1353.84,322.47" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,886.95L1358.16,886.95L1358.16,316.71"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1379.64" y="326.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="1214.16,958.95 1209.84,947.43 1218.48,947.43" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,912.664L1214.16,912.664L1214.16,953.19"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="1240.89" y="943.83" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9193</text>
+<polygon points="206.16,706.95 194.64,711.27 194.64,702.63" style="fill:rgb(80,88,97)"/>
+<path d="M715.303,922.95L715.303,976.093L206.16,976.093L105.017,976.093L105.017,706.95L200.4,706.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="165.703" y="722.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">80</text>
+<text x="165.703" y="742.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="206.16,562.95 194.64,567.27 194.64,558.63" style="fill:rgb(80,88,97)"/>
+<path d="M725.589,922.95L725.589,986.379L206.16,986.379L94.7314,986.379L94.7314,562.95L200.4,562.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="161.589" y="578.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5986</text>
+<text x="161.589" y="598.23" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">5985</text>
+<polygon points="206.16,418.95 194.64,423.27 194.64,414.63" style="fill:rgb(80,88,97)"/>
+<path d="M735.874,922.95L735.874,996.664L206.16,996.664L84.4457,996.664L84.4457,418.95L200.4,418.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="157.474" y="434.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="206.16,274.95 194.64,279.27 194.64,270.63" style="fill:rgb(80,88,97)"/>
+<path d="M746.16,922.95L746.16,1006.95L206.16,1006.95L74.16,1006.95L74.16,274.95L200.4,274.95"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="153.36" y="290.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443</text>
+<polygon points="864.446,238.95 860.126,227.43 868.766,227.43" style="fill:rgb(80,88,97)"/>
+<path d="M998.16,166.95L998.16,181.35L864.446,181.35L864.446,233.19"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="891.172" y="223.83" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">4443</text>
+<polygon points="843.874,238.95 839.554,227.43 848.194,227.43" style="fill:rgb(80,88,97)"/>
+<path d="M710.16,166.95L710.16,181.35L843.874,181.35L843.874,233.19"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="817.148" y="223.83" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">9194</text>
+<polygon points="825.36,130.95 836.88,126.63 836.88,135.27" style="fill:rgb(80,88,97)"/>
+<path d="M882.96,130.95L831.12,130.95"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);stroke-dasharray:7.2,7.2;" />
+<text x="854.16" y="130.95" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central"></text>
+<text x="854.16" y="146.07" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">uses</text>
+<polygon points="350.16,382.95 345.84,371.43 354.48,371.43" style="fill:rgb(80,88,97)"/>
+<path d="M594.96,130.95L110.16,130.95L110.16,269.807L120.446,269.807L120.446,280.093L110.16,280.093L110.16,334.95L350.16,334.95L350.16,377.19"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(80,88,97);" />
+<text x="397.661" y="367.83" text-anchor="middle" fill="rgb(80,88,97)" dominant-baseline="central">443 login</text>
+<path d="M16.56,1102.95L1559.76,1102.95A14.4 14.4 0 0 0 1574.16 1088.55L1574.16,37.35A14.4 14.4 0 0 0 1559.76 22.95L16.56,22.95A14.4 14.4 0 0 0 2.16 37.35L2.16,1088.55A14.4 14.4 0 0 0 16.56 1102.95Z"  style="fill:none;stroke-width:2.16;stroke:rgb(80,88,97);" />
+<path d="M586.56,40.95L989.76,40.95L989.76,4.95L586.56,4.95Z"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(255,255,255);" />
+<text x="788.16" y="22.95" text-anchor="middle" font-weight="bold" fill="rgb(80,88,97)" font-size="156.25%" dominant-baseline="central">Veeam Backup for Office 365</text>
+<text x="9.25766" y="1116.73" text-anchor="start" font-style="italic" fill="rgb(80,88,97)" font-size="80%" dominant-baseline="central">For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80</text>
+</svg>
