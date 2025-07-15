@@ -1,0 +1,248 @@
+//VEEAM PREAMBLE
+//https://www.veeam.com/company/brand-resource-center.html
+$viridis = 0x00d15f
+$lime = 0x9cffa3
+$mint = 0x32f26f
+$pine = 0x007f49
+$darkmineral = 0x505861
+$frenchgrey = 0xADACAF
+$fog = 0xf0f0f0
+$sol = 0xffd839
+$suma = 0xfe8a25
+$casia = 0x8e71f4
+$electricazure = 0x3700ff
+$sky = 0x57e0ff
+$ignis = 0xed2b3d
+
+$remove = 0xee00a0
+
+$grey = $darkmineral
+$green = $viridis
+$policy = $casia
+
+color = $remove
+fontscale = 1
+
+
+//below icon label
+define blbl {
+  text with .n at $1.s $3 color $2
+}
+//above icon label
+define albl {
+  text with .s at $1.n $3 color $2
+}
+
+//END VEEAM PREAMBLE
+
+
+$rad = 0.1
+$f5=0.05
+$colsplit = 1.5
+$defbox = 1
+
+$max=7
+$o = boxht/$max
+$diff = $defbox/3
+
+scale=1
+boxwid=$defbox
+boxht=$defbox
+
+
+DIA:[
+down
+//External sources
+
+VWEB: box "cls-veeamcom"
+move
+
+
+//workloads
+M365: box "cls-m365"
+move
+OPSP: box "cls-sharepoint"
+move
+OPEX: box "cls-exchange" 
+
+
+//Veeam stack
+move to VWEB.e invis
+right
+move $colsplit
+VBO: box "cls-vbm" 
+down
+move
+CON: box "cls-laptop"
+
+
+right
+move 1.5
+SMTP: box "cls-letter" 
+move to CON.s
+
+down
+move
+PG: box "cls-db" 
+
+down 
+move
+NATS: box "cls-nats"
+
+down
+
+
+
+move
+PROXY: box height 280% width 130% color $green
+text "Proxy" with .n at previous box.n color $green
+
+CACHE: box "cls-repo" with .s at previous box.s +(0,boxht/2.5) 
+PRXICON: box "cls-proxy" with .s at previous box.n +(0,boxht/8)
+
+up
+move to VBO.nw-(boxwid/2,0)
+move
+
+R: box "cls-rest" 
+up
+move to VBO.ne+(boxwid/2,0)
+move
+
+B: box "cls-webconsole" 
+
+
+
+//Object Storage
+
+
+OS: box "cls-objectstorage" with .n at VBO.n+(3.5,0)
+
+move to PROXY.e
+right;move
+REMOTEPROXY: box "cls-proxy" 
+
+
+
+
+//Labels
+
+color = $grey
+
+blbl(VWEB,$grey,"*.veeam.com")
+blbl(M365,$grey,"Microsoft 365")
+blbl(OPSP,$grey,"On Premises" "Sharepoint")
+blbl(OPEX,$grey,"On Premises" "Exchange")
+
+blbl(VBO,$grey,"Veeam Backup" "for M365")
+blbl(CON,$grey,"Console")
+
+blbl(PG,$grey,"Postgres")
+blbl(NATS,$grey,"NATS")
+
+blbl(REMOTEPROXY,$grey,"Remote Proxy" "(Migrate Data)")
+
+blbl(CACHE,$grey,"Cache" "Or Local Repo")
+
+blbl(SMTP,$grey,"SMTP")
+albl(OS,$grey,"Object Storage")
+
+albl(R,$grey,"REST API")
+albl(B,$grey,"Restore Portal")
+
+
+//connnections
+//VBO
+$i=0.5
+define porttext {
+ text $1 with .n at 0.6 way between 3rd vertex of previous and 4th vertex of previous   color $grey
+ //text $1 with .n at 4th vertex of previous -((this.n.x-previous.n.x)/1.8,0)   color $grey
+}
+define vboconnection {
+ arrow from VBO.nw-(0,$o*$i) left 0.2+$diff+$o*($max-$i) then down until even with $1 then to $1 color $grey rad $rad
+ porttext($2)
+ $i+= 1
+}
+vboconnection(VWEB.e,"443" "80")
+vboconnection(M365.e,"443")
+vboconnection(OPSP.e,"5986" "5985")
+vboconnection(OPEX.e,"80" "443")
+vboconnection(PROXY.w,"9193" "445 Win" "22 Lin")
+
+
+vboconnection(NATS.w,"4222")
+vboconnection(PG.w,"5432")
+
+arrow from CON.e right $o*6 then up until even with VBO.e-(0,$o*3) then to VBO.e-(0,$o*3) color $grey rad $rad
+//text "9191" with .nw at previous.end color $grey
+
+arrow from VBO.ne-(0,$o) to OS.nw-(0,$o) color $grey
+text "443" with .ne at 2nd vertex of previous  color $grey
+
+
+//proxy
+$i = 0.5
+define proxyconnection {
+ arrow from PROXY.ne-(0,$o*$i) right $o*5+$diff-$o*($max-$i) then up until even with $1 then to $1 color $grey  rad $rad
+ porttext($2)
+ $i+= 1
+}
+
+proxyconnection(NATS.e,"4222")
+proxyconnection(PG.e,"5432")
+proxyconnection(VBO.e,"9191")
+proxyconnection(SMTP.w,"25" "or 465" "or 587")
+
+MIDP: dot with .c at 3rd vertex of previous arrow invis
+arrow from VBO.ne-(0,$o*2.5) right until even with MIDP then down until even with SMTP.w then to SMTP.w color $grey rad $rad
+
+arrow from PROXY.ne-(0,$o*$i) then right until even with OS.s then to OS.s color $grey  rad $rad
+text "443" with .nw at  3rd vertex of previous color $grey
+
+
+
+arrow from PROXY.e to REMOTEPROXY.w color $grey  rad $rad
+text "9193" with .se at  2nd vertex of previous color $grey
+
+define proxyconnectionsource {
+ arrow from PROXY.sw+($o*$i,0) down $diff/2+($o*$i) then left until even with $1 then left $diff+$o*$i then up until even with $1 then to $1 color $grey  rad $rad
+ text $2 with .n at 0.6 way between 5th vertex of previous and 6th vertex of previous   color $grey 
+ $i+= 1
+}
+$i = 0.5
+proxyconnectionsource(OPEX.w,"80" "443")
+proxyconnectionsource(OPSP.w,"5986" "5985")
+proxyconnectionsource(M365.w,"443")
+proxyconnectionsource(VWEB.w,"443" "80")
+
+
+
+//rest
+arrow from B.s then down 0.1 then left until even with VBO.n+($o,0) then to VBO.n+($o,0)  color $grey  rad $rad
+text "4443" with .sw at 4th vertex of previous color $grey
+
+arrow from R.s then down 0.1 then right until even with VBO.n-($o,0) then to VBO.n-($o,0)  color $grey  rad $rad
+text "9194" with .se at 4th vertex of previous color $grey
+
+arrow from B.w to R.e color $grey dashed ""
+text "uses" with .n at previous.s color $grey
+
+//master of complexity :D
+arrow from R.w left until even with M365.w-($diff,0) then down until even with VWEB.c+(0,$o/2) then right $o then down $o then left $o then down until even with M365.n+(0,$diff/3) then right until even with M365.n then to M365.n color $grey  rad $rad
+text with .sw at previous.s "443 login" color $grey
+]
+
+C: dot at DIA.n+(0,boxht/2) invis
+T: box with .c at previous.c color $grey "Veeam Backup for Office 365" big big big big bold fit invis
+
+$mg = 0.3
+DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
+ down until even with DIA.sw -(0,$mg) then\
+ right until even with DIA.se +($mg,0) then\
+ up until even with T.e then \
+ left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
+
+//box width DIA.width+boxwid/2 height DIA.height+boxht*2 at DIA.c behind DIA.VWEB color $grey rad 0.1
+//box with .c at previous.n fill white ht boxht/2 width boxwid*1.4 color white
+
+box with .nw at DIABOX.sw "For a complete list of: https://helpcenter.veeam.com/docs/vbo365/guide/vbo_used_ports.html?ver=80" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
