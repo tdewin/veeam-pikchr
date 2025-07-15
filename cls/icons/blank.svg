@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Veeam_product_1"
+   data-name="Veeam product 1"
+   viewBox="0 0 100 100"
+   version="1.1"
+   sodipodi:docname="blank.svg"
+   width="100"
+   height="100"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.64"
+     inkscape:cx="58.189655"
+     inkscape:cy="40.193966"
+     inkscape:window-width="1440"
+     inkscape:window-height="810"
+     inkscape:window-x="47"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Veeam_Backup_for_Microsoft_Office_365" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+</style>
+  </defs>
+  <g
+     id="Veeam_Backup_for_Microsoft_Office_365"
+     data-name="Veeam Backup for Microsoft Office 365"
+     transform="matrix(2.9411765,0,0,2.9411765,-23.529412,-23.529412)"
+     inkscape:label="blank">
+    <path
+       d="M 33.19,8 H 10 C 8.9,8 8,8.9 8,10 V 40 C 8,41.1 8.9,42 10,42 H 40 C 41.1,42 42,41.1 42,40 V 16.81 C 42,16.28 41.79,15.77 41.41,15.4 L 34.6,8.59 C 34.22,8.21 33.72,8 33.19,8 Z"
+       id="path1"
+       style="fill:#00d15f" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;line-height:0.9;font-family:'ES Build Full Bauhaus';-inkscape-font-specification:'ES Build Full Bauhaus';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:1"
+       x="24.755205"
+       y="29.100401"
+       id="text1">Blank</text>
+  </g>
+</svg>
