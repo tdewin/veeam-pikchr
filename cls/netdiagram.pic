@@ -1,0 +1,82 @@
+//VEEAM PREAMBLE
+//https://www.veeam.com/company/brand-resource-center.html
+$viridis = 0x00d15f
+$lime = 0x9cffa3
+$mint = 0x32f26f
+$pine = 0x007f49
+$darkmineral = 0x505861
+$frenchgrey = 0xADACAF
+$fog = 0xf0f0f0
+$sol = 0xffd839
+$suma = 0xfe8a25
+$casia = 0x8e71f4
+$electricazure = 0x3700ff
+$sky = 0x57e0ff
+$ignis = 0xed2b3d
+
+$remove = 0xee00a0
+
+$grey = $darkmineral
+$green = $viridis
+$policy = $casia
+
+color = $remove
+fontscale = 1
+
+//below icon label
+define blbl {
+  text with .n at $1.s $3 color $2
+}
+//above icon label
+define albl {
+  text with .s at $1.n $3 color $2
+}
+
+define netdot {
+  dot at $1 vertex of NET color $grey
+}
+define conn {
+  line from previous box $1 to previous dot.n color $grey
+}
+
+boxwid = 1
+boxht = 1
+
+//END VEEAM PREAMBLE
+
+//DIAGRAM
+//EDIT inside the DIAgram
+DIA:[
+  $offset = 0.5
+
+  NET: line from (0,0) to (boxwid*0.5,0) then to (boxwid*2,0) then to (boxwid*3.5,0) then to (boxwid*5,0) color $grey
+
+  netdot(2nd)
+  VBR: box "cls-vbr" with .s at previous dot+ (0,$offset)
+  conn(.s)
+
+  netdot(3rd)
+  PROXY:box "cls-proxy" with .n at previous dot - (0,$offset)
+  conn(.n)
+
+  netdot(4rd)
+  OS:box "cls-objectstorage" with .n at 4th vertex of NET - (0,$offset)
+  conn(.n)
+  
+  
+]
+
+//END DIAGRAM
+C: dot at DIA.n+(0,boxht/2) invis
+T: box with .c at previous.c color $grey "Veeam Diagram" big big big big bold fit invis
+
+$mg = 0.3
+DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
+ down until even with DIA.sw -(0,$mg) then\
+ right until even with DIA.se +($mg,0) then\
+ up until even with T.e then \
+ left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
+
+
+
+box with .nw at DIABOX.sw "For more help https://helpcenter.veeam.com/" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
