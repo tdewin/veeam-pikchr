@@ -1,0 +1,225 @@
+//VEEAM PREAMBLE
+//https://www.veeam.com/company/brand-resource-center.html
+$viridis = 0x00d15f
+$lime = 0x9cffa3
+$mint = 0x32f26f
+$pine = 0x007f49
+$darkmineral = 0x505861
+$frenchgrey = 0xADACAF
+$fog = 0xf0f0f0
+$sol = 0xffd839
+$suma = 0xfe8a25
+$casia = 0x8e71f4
+$electricazure = 0x3700ff
+$sky = 0x57e0ff
+$ignis = 0xed2b3d
+
+$remove = 0xee00a0
+
+$grey = $darkmineral
+$green = $viridis
+$policy = $casia
+
+color = $remove
+fontscale = 1.4
+
+//below icon label
+define blbl {
+  text with .n at $1.s $3 color $2
+}
+//above icon label
+define albl {
+  text with .s at $1.n $3 color $2
+}
+
+define netdot {
+  dot at $1 vertex of NET color $grey
+}
+define conn {
+  line from previous box $1 to previous dot.n color $grey
+}
+
+boxwid = 1
+boxht = 1
+
+//END VEEAM PREAMBLE
+
+//DIAGRAM
+//EDIT inside the DIAgram
+DIA:[
+  $offset = boxht/1.5
+  $poffset = boxht/8
+  $o = $poffset
+  $oh = $o/2
+  $o2 = $o*2
+  $o3 = $o*3
+  $o4 = $o*4
+  $o5 = $o*5
+  $o6 = $o*6
+
+  PROX: box  color $remove "cls-proxy"
+  REPO: box same as PROX at PROX+(3*boxwid,0) "cls-repo"
+  COPYREPO: box same as PROX at REPO+(5*boxwid,0) "cls-repo"
+  MOUNT: box same as PROX with .w at REPO.e+(1.5*boxwid,0) "cls-mount"
+  VBR: box  same as PROX at PROX.n+(1.5*boxwid,3.5) "cls-vbr"
+  PSQL: box same as PROX with .n at VBR.s-(0,$offset) "cls-db"
+  CLOUD: box  same as PROX with .sw at VBR.ne+(boxwid,3*boxwid) "cls-veeamcom"
+  CLOUD80: box same as PROX with .n at CLOUD.s-(0,$offset) "cls-webconsole"
+  AZCLOUD: box same as PROX with .s at CLOUD.n+(0,$offset) "cls-webconsole"
+  AZCLOUD80: box same as PROX with .s at AZCLOUD.n+(0,$offset) "cls-webconsole"
+  CONSOLE: box same as PROX  with .nw at VBR.s+(3.5*boxwid,boxwid) "cls-laptop"
+  VCENTER: box same as PROX at PROX.n+(-3*boxwid,3) "cls-vcenter"
+  ESXI: box same as PROX with .n at VCENTER.s -(0,$offset) "cls-esxi"
+  VAULTPROX: box same as PROX "cls-gw" with .n at PROX.s - (-1.5*boxwid,boxht) 
+
+  color = $grey
+  blbl(PROX,$grey,"Proxy")
+  //  blbl(,$grey,"")
+  blbl(REPO,$grey,"Repository")
+  blbl(COPYREPO,$grey,"Copy Repository") 
+  blbl(MOUNT,$grey,"Mount Server")
+  blbl(VBR,$grey,"Veeam" "Backup & Replication")
+  blbl(PSQL,$grey,"Postgres")
+  blbl(CLOUD,$grey,"*.veeam.com" )
+  blbl(CLOUD80,$grey,"*.ss2.us" "*.amazontrust.com")
+  blbl(AZCLOUD,$grey,"*.blob.core.windows.net" "*.blob.storage.azure.net")
+  blbl(AZCLOUD80,$grey,"ocsp.digicert.com" "ocsp.msocsp.com")
+  blbl(CONSOLE,$grey,"Console")
+  blbl(VCENTER,$grey,"vCenter")
+  blbl(ESXI,$grey,"ESXi")
+  blbl(VAULTPROX,$grey,"Proxy" "Or Gateway")
+
+/*
+  VBR
+*/
+
+  arrow -> from VBR.w-(0,$o3) left $o5 then down until even with PSQL.w then to PSQL.w
+  text "TCP 5432" with .ne at previous arrow.se
+
+/*
+Proxy
+*/
+
+  PV: arrow ->  from PROX.n-($oh,0) up until even with VBR.w+(0,$oh) then to VBR.w+(0,$oh)
+  text "2500-3500" with .s at previous.n
+
+  VP: arrow ->  from VBR.w-(0,$oh) left until even with PROX.n+($oh,0) then to PROX.n+($oh,0)
+  text "445,443,135,49152 to 65535" ljust \
+       "22" ljust \
+       "6162,6160,6210" ljust \
+       "2500-3500" ljust  with .s at previous arrow.sw+($poffset,$poffset)
+
+  PR: arrow -> from PROX.e to REPO.w
+  text  "2500-3500" with .se at previous.ne
+
+/*
+REPO
+*/
+  VR: arrow <-  from REPO.n+($oh,0) up until even with VBR.e+(0,$oh) then to VBR.e+(0,$oh)
+  text "445,443,135,49152 to 65535" ljust\
+       "22" ljust \
+       "6162,6160,6210" ljust \
+       "2500-3500" ljust  with .s at previous.se+($o,$o)
+
+  RV: arrow <-  from VBR.e-(0,$oh) right until even with REPO.n-($oh,0) then to REPO.n-($oh,0)
+  text  "2500-3500" with .n at previous arrow.n
+
+
+  COPYA: arrow -> from REPO.e-(0,$o3) right $o then down $o6 then right until even with COPYREPO.w-($o,0)\
+   then up until even with COPYREPO.w then to COPYREPO.w
+  text "2500-3500 (copy)" with .n at previous.s
+
+
+/*
+ VIRT CONNECTIONS
+*/
+
+  VV: arrow -> from VBR.nw+($o2,0) up $o2 then \
+    right until even with VCENTER.ne+($o2,0) then down until even with VCENTER.ne-(0,$o) then to VCENTER.ne-(0,$o)
+  text "TCP 443" with .sw at previous arrow.nw +($poffset,0) 
+
+  PXVC: arrow -> from PROX.w-(0,$o) left until even with VCENTER.nw-($o2,0) then \
+    up until even with VCENTER.w then to VCENTER.w
+  text "TCP 443" ljust with .n at previous arrow.sw 
+
+
+  VE: arrow -> from VBR.nw+($o,0) up $o then right until even with ESXI.ne+($o3,0) then \
+    down until even with ESXI.e+(0,$oh) then to ESXI.e+(0,$oh)
+  text "TCP 443" "TCP 902" with .sw at previous arrow.sw +($poffset*3,0) 
+
+  PXVE: arrow -> from PROX.w left $o5 then up until even with ESXI.e-(0,$oh)   then to ESXI.e-(0,$oh) 
+  text "TCP 443, 902" with .nw at previous arrow.nw
+
+
+  /*
+  Public cloud connectors
+  */
+  
+  HRC: arrow -> from REPO.e-(0,$o2) right $o2 then down $o6 then right until even with CONSOLE.e+(1.2*boxht,0) then up until even with CLOUD.e+(0,$o) then to CLOUD.e+(0,$o)
+  text "HTTPS 443 for Hardened Repo" with .s at previous.s
+  
+  MOUNTC: arrow -> from MOUNT.e right until even with HRC.e
+  text "HTTPS 443 AV" with .s at previous.n
+  
+  arrow -> from VBR.ne-($o2,0) up until even with CLOUD.w then to CLOUD.w
+  text "TCP 443" with .s at previous.n
+  arrow -> from VBR.ne-($o,0) up until even with CLOUD80.w then to CLOUD80.w
+  text "TCP 80" with .s at previous.n
+  
+  arrow -> from VBR.ne-($o3,0) up until even with AZCLOUD.w-(0,$o) then to AZCLOUD.w-(0,$o)
+  text "TCP 443" with .n at previous.n
+  
+  arrow -> from VBR.ne-($o4,0) up until even with AZCLOUD80.w-(0,$o) then to AZCLOUD80.w-(0,$o)
+  text "TCP 80" with .n at previous.n
+  
+  arrow -> from VAULTPROX.w+(0,$oh) left until even with VCENTER.w - ($o3,0) then up until even with AZCLOUD.w then to AZCLOUD.w 
+  text "TCP 443" with .s at previous.n
+  arrow -> from VAULTPROX.w-(0,$oh) left until even with VCENTER.w - ($o4,0) then  up until even with AZCLOUD80.w then to AZCLOUD80.w
+  text "TCP 80" with .s at previous.n
+  
+
+  arrow -> from PROX.se-($o,0) to VAULTPROX.n-($o,0) dashed
+  arrow -> from REPO.sw+($o,0) to VAULTPROX.n+($o,0) dashed
+
+
+  /*
+   VBR Console connection
+  */
+  
+  arrow -> from CONSOLE.nw-(0,$o)  to VBR.ne-(0,$o)
+  text "TCP 9392, 9420, 9396, 9401" with .s at previous.n
+  //box at 0,0 "0";box "1";box "2";box "3"
+  
+  
+  arrow -> from CONSOLE.n up until even with CLOUD.e then to CLOUD.e
+  text "TCP 443" with .w at previous.e
+  
+  arrow -> from CONSOLE.se-($o,0) to MOUNT.ne-($o,0)
+  text "TCP 2500-3300" with .w at previous.e
+  
+  
+  /*
+   Mount server
+  */
+  
+  arrow -> from MOUNT.n-($o,0) up until even with CONSOLE.s-(0,$o3) then left until even with REPO.ne then up until even with VBR.e+(0,$o2) then to VBR.e+(0,$o2)
+  text "TCP 9401" ljust with .n at previous arrow.n+(0,0)
+  
+  arrow -> from MOUNT.w to REPO.e
+  text "TCP 2500-3300" with .n at previous.c
+]
+
+//END DIAGRAM
+C: dot at DIA.n+(0,boxht/2) invis
+T: box with .c at previous.c color $grey "Veeam Backup & Replication Port Diagram" big big big big bold fit invis
+
+$mg = 0.3
+DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
+ down until even with DIA.sw -(0,$mg) then\
+ right until even with DIA.se +($mg,0) then\
+ up until even with T.e then \
+ left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
+
+
+
+box with .nw at DIABOX.sw "For more help https://helpcenter.veeam.com/docs/backup/vsphere/used_ports.html?ver=120" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
