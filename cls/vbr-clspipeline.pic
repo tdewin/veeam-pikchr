@@ -57,20 +57,23 @@ DIA:[
   $o5 = $o*5
   $o6 = $o*6
 
-  PROX: box  color $remove "cls-proxy"
-  REPO: box same as PROX at PROX+(3*boxwid,0) "cls-repo"
-  COPYREPO: box same as PROX at REPO+(5*boxwid,0) "cls-repo"
-  MOUNT: box same as PROX with .w at REPO.e+(1.5*boxwid,0) "cls-mount"
-  VBR: box  same as PROX at PROX.n+(1.5*boxwid,3.5) "cls-vbr"
-  PSQL: box same as PROX with .n at VBR.s-(0,$offset) "cls-db"
-  CLOUD: box  same as PROX with .sw at VBR.ne+(boxwid,3*boxwid) "cls-veeamcom"
-  CLOUD80: box same as PROX with .n at CLOUD.s-(0,$offset) "cls-webconsole"
-  AZCLOUD: box same as PROX with .s at CLOUD.n+(0,$offset) "cls-webconsole"
-  AZCLOUD80: box same as PROX with .s at AZCLOUD.n+(0,$offset) "cls-webconsole"
-  CONSOLE: box same as PROX  with .nw at VBR.s+(3.5*boxwid,boxwid) "cls-laptop"
-  VCENTER: box same as PROX at PROX.n+(-3*boxwid,3) "cls-vcenter"
-  ESXI: box same as PROX with .n at VCENTER.s -(0,$offset) "cls-esxi"
-  VAULTPROX: box same as PROX "cls-gw" with .n at PROX.s - (-1.5*boxwid,boxht) 
+  color=$remove
+  PROX: box  color $remove "Proxy"
+  REPO: box same as PROX at PROX+(3*boxwid,0) "Repo"
+  COPYREPO: box same as PROX at REPO+(5*boxwid,0) "Repo"
+  MOUNT: box same as PROX with .w at REPO.e+(1.5*boxwid,0) "Mount"
+  VBR: box  same as PROX at PROX.n+(1.5*boxwid,3.5) "VBR"
+  PSQL: box same as PROX with .n at VBR.s-(0,$offset) "DB"
+  CLOUD: box  same as PROX with .sw at VBR.ne+(boxwid,3*boxwid) "veeamcom"
+  CLOUD80: box same as PROX with .n at CLOUD.s-(0,$offset) "webconsole"
+  AZCLOUD: box same as PROX with .s at CLOUD.n+(0,$offset) "vault"
+  AZCLOUD80: box same as PROX with .s at AZCLOUD.n+(0,$offset) "webconsole"
+  CONSOLE: box same as PROX  with .nw at VBR.s+(3.5*boxwid,boxwid) "laptop"
+  VCENTER: box same as PROX at PROX.n+(-3*boxwid,3) "vcenter"
+  ESXI: box same as PROX with .ne at VCENTER.se -(0,$offset) "server" wid 0.65*boxwid
+  VAULTPROX: box same as PROX "gw" with .n at PROX.s - (-1.5*boxwid,boxht) 
+
+  color=$green
 
   color = $grey
   blbl(PROX,$grey,"Proxy")
@@ -160,16 +163,17 @@ REPO
   
   MOUNTC: arrow -> from MOUNT.e right until even with HRC.e
   text "HTTPS 443 AV" with .s at previous.n
-  
-  arrow -> from VBR.ne-($o2,0) up until even with CLOUD.w then to CLOUD.w
-  text "TCP 443" with .s at previous.n
-  arrow -> from VBR.ne-($o,0) up until even with CLOUD80.w then to CLOUD80.w
+ 
+  arrow -> from VBR.ne-($o2,0) up until even with CLOUD80.w then to CLOUD80.w
   text "TCP 80" with .s at previous.n
-  
-  arrow -> from VBR.ne-($o3,0) up until even with AZCLOUD.w-(0,$o) then to AZCLOUD.w-(0,$o)
+ 
+  arrow -> from VBR.ne-($o3,0) up until even with CLOUD.w then to CLOUD.w
+  text "TCP 443" with .s at previous.n
+
+  arrow -> from VBR.ne-($o4,0) up until even with AZCLOUD.w-(0,$o) then to AZCLOUD.w-(0,$o)
   text "TCP 443" with .n at previous.n
   
-  arrow -> from VBR.ne-($o4,0) up until even with AZCLOUD80.w-(0,$o) then to AZCLOUD80.w-(0,$o)
+  arrow -> from VBR.ne-($o5,0) up until even with AZCLOUD80.w-(0,$o) then to AZCLOUD80.w-(0,$o)
   text "TCP 80" with .n at previous.n
   
   arrow -> from VAULTPROX.w+(0,$oh) left until even with VCENTER.w - ($o3,0) then up until even with AZCLOUD.w then to AZCLOUD.w 

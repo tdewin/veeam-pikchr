@@ -54,40 +54,40 @@ DIA:[
 down
 //External sources
 
-VWEB: box "cls-veeamcom"
+VWEB: box "veeamcom"
 move
 
 
 //workloads
-M365: box "cls-m365"
+M365: box "m365"
 move
-OPSP: box "cls-sharepoint"
+OPSP: box "sharepoint"
 move
-OPEX: box "cls-exchange" 
+OPEX: box "exchange" 
 
 
 //Veeam stack
 move to VWEB.e invis
 right
 move $colsplit
-VBO: box "cls-vbm" 
+VBO: box "vbm" 
 down
 move
-CON: box "cls-laptop"
+CON: box "laptop"
 
 
 right
 move 1.5
-SMTP: box "cls-letter" 
+SMTP: box "letter" 
 move to CON.s
 
 down
 move
-PG: box "cls-db" 
+PG: box "db" 
 
 down 
 move
-NATS: box "cls-nats"
+NATS: box "nats"
 
 down
 
@@ -97,30 +97,30 @@ move
 PROXY: box height 280% width 130% color $green
 text "Proxy" with .n at previous box.n color $green
 
-CACHE: box "cls-repo" with .s at previous box.s +(0,boxht/2.5) 
-PRXICON: box "cls-proxy" with .s at previous box.n +(0,boxht/8)
+CACHE: box "repo" with .s at previous box.s +(0,boxht/2.5) 
+PRXICON: box "proxy" with .s at previous box.n +(0,boxht/8)
 
 up
 move to VBO.nw-(boxwid/2,0)
 move
 
-R: box "cls-rest" 
+R: box "rest" 
 up
 move to VBO.ne+(boxwid/2,0)
 move
 
-B: box "cls-webconsole" 
+B: box "webconsole" 
 
 
 
 //Object Storage
 
 
-OS: box "cls-objectstorage" with .n at VBO.n+(3.5,0)
+OS: box "objectstorage" with .n at VBO.n+(3.5,0)
 
 move to PROXY.e
 right;move
-REMOTEPROXY: box "cls-proxy" 
+REMOTEPROXY: box "proxy" 
 
 
 
