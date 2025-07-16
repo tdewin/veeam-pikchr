@@ -52,15 +52,15 @@ DIA:[
   NET: line from (0,0) to (boxwid*0.5,0) then to (boxwid*2,0) then to (boxwid*3.5,0) then to (boxwid*5,0) color $grey
 
   netdot(2nd)
-  VBR: box "cls-vbr" with .s at previous dot+ (0,$offset)
+  VBR: box "VBR" with .s at previous dot+ (0,$offset)
   conn(.s)
 
   netdot(3rd)
-  PROXY:box "cls-proxy" with .n at previous dot - (0,$offset)
+  PROXY:box "Proxy" with .n at previous dot - (0,$offset)
   conn(.n)
 
   netdot(4rd)
-  OS:box "cls-objectstorage" with .n at 4th vertex of NET - (0,$offset)
+  OS:box "Objectstorage" with .n at 4th vertex of NET - (0,$offset)
   conn(.n)
   
   
