@@ -24,7 +24,7 @@ $policy = $casia
 thickness = 0.015*2
 charwid = 0.06
 charht = 0.10
-
+linerad = 0.1
 
 color = $remove
 fontscale = 1.7
@@ -183,7 +183,8 @@ REPO
   arrow -> from VBR.ne-($o4,0) up until even with AZCLOUD.w-(0,$o) then to AZCLOUD.w-(0,$o)
   text "TCP 443" with .n at previous.n
   
-  arrow -> from VBR.ne-($o5,0) up until even with AZCLOUD80.w-(0,$o) then to AZCLOUD80.w-(0,$o)
+  arrow -> from VBR.ne-($o5,0) up until even with AZCLOUD.w-(0,$oh) then left $o then up $o then right $o then\
+      up until even with AZCLOUD80.w-(0,$o) then to AZCLOUD80.w-(0,$o)
   text "TCP 80" with .n at previous.n
   
   arrow -> from VAULTPROX.w+(0,$oh) left until even with VCENTER.w - ($o3,0) then up until even with AZCLOUD.w then to AZCLOUD.w 
