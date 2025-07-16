@@ -20,8 +20,14 @@ $grey = $darkmineral
 $green = $viridis
 $policy = $casia
 
+//https://github.com/drhsqlite/pikchr/blob/2c46091ee5548d4fa3fedaea2fc8c0a05c5a89eb/pikchr.y#L975
+thickness = 0.015*2
+charwid = 0.06
+charht = 0.10
+
+
 color = $remove
-fontscale = 1.4
+fontscale = 1.7
 
 //below icon label
 define blbl {
@@ -56,6 +62,10 @@ DIA:[
   $o4 = $o*4
   $o5 = $o*5
   $o6 = $o*6
+
+
+
+  
 
   color=$remove
   PROX: box  color $remove "Proxy"
@@ -103,10 +113,10 @@ DIA:[
 Proxy
 */
 
-  PV: arrow ->  from PROX.n-($oh,0) up until even with VBR.w+(0,$oh) then to VBR.w+(0,$oh)
+  PV: arrow ->  from PROX.n-($oh,0) up until even with VBR.sw+(0,$o4) then to VBR.sw+(0,$o4)
   text "2500-3500" with .s at previous.n
 
-  VP: arrow ->  from VBR.w-(0,$oh) left until even with PROX.n+($oh,0) then to PROX.n+($oh,0)
+  VP: arrow ->  from VBR.sw+(0,$o3) left until even with PROX.n+($oh,0) then to PROX.n+($oh,0)
   text "445,443,135,49152 to 65535" ljust \
        "22" ljust \
        "6162,6160,6210" ljust \
@@ -118,13 +128,13 @@ Proxy
 /*
 REPO
 */
-  VR: arrow <-  from REPO.n+($oh,0) up until even with VBR.e+(0,$oh) then to VBR.e+(0,$oh)
+  VR: arrow <-  from REPO.n+($oh,0) up until even with VBR.se+(0,$o4) then to VBR.se+(0,$o4)
   text "445,443,135,49152 to 65535" ljust\
        "22" ljust \
        "6162,6160,6210" ljust \
        "2500-3500" ljust  with .s at previous.se+($o,$o)
 
-  RV: arrow <-  from VBR.e-(0,$oh) right until even with REPO.n-($oh,0) then to REPO.n-($oh,0)
+  RV: arrow <-  from VBR.se+(0,$o3) right until even with REPO.n-($oh,0) then to REPO.n-($oh,0)
   text  "2500-3500" with .n at previous arrow.n
 
 
@@ -190,7 +200,7 @@ REPO
    VBR Console connection
   */
   
-  arrow -> from CONSOLE.nw-(0,$o)  to VBR.ne-(0,$o)
+  arrow -> from CONSOLE.nw-(0,$o2)  to VBR.ne-(0,$o2)
   text "TCP 9392, 9420, 9396, 9401" with .s at previous.n
   //box at 0,0 "0";box "1";box "2";box "3"
   
@@ -206,7 +216,7 @@ REPO
    Mount server
   */
   
-  arrow -> from MOUNT.n-($o,0) up until even with CONSOLE.s-(0,$o3) then left until even with REPO.ne then up until even with VBR.e+(0,$o2) then to VBR.e+(0,$o2)
+  arrow -> from MOUNT.n-($o,0) up until even with CONSOLE.s-(0,$o3) then left until even with REPO.ne then up until even with VBR.e+(0,$o) then to VBR.e+(0,$o)
   text "TCP 9401" ljust with .n at previous arrow.n+(0,0)
   
   arrow -> from MOUNT.w to REPO.e
