@@ -15,9 +15,9 @@ FROM python:3-alpine
 
 VOLUME /icons
 VOLUME /data
-VOLUME /fonts
 
-RUN apk add --no-cache librsvg rsvg-convert curl font-ubuntu
+
+RUN apk add --no-cache librsvg rsvg-convert fontconfig curl font-ubuntu
 
 # Set working directory
 WORKDIR /app
@@ -25,15 +25,19 @@ WORKDIR /app
 # Copy the compiled binary from the builder stage
 COPY --from=builder /build/pikchr/pikchr /app
 COPY ./*.py /app
-COPY ./sample.sh /app
-COPY ./inline.sh /app
-COPY ./inline-pre.sh /app
+COPY ./*.sh /app
+
 
 ENV FONT="ubuntu mono"
 
+#ENV FONT="es build"
+#COPY ./fonts/*.ttf /usr/share/fonts/esbuild/
+#RUN fc-cache -fv /usr/share/fonts/esbuild/
 
 # Set the entry point
 ENTRYPOINT ["/bin/sh"]
+
+
 
 #docker build -t veeam-pikchr .
 
@@ -51,6 +55,5 @@ ENTRYPOINT ["/bin/sh"]
 # -or inline
 # you can modify the stylesheet in the fonts folder
 # by default the ubuntu font package is installed
-# eg download the ubuntu font from https://fonts.google.com/specimen/Ubuntu+Sans+Mono?query=Ubuntu (you need the latin one)
 # notice that /data/test.pic should exist, you can create it with the previous sample, then maintain it outside the container
-# docker run --rm -it -v .:/data  -v ./fonts:/fonts -v ./icons:/icons -e FONT="ubuntu mono" -e NAME=veeamfulldemo veeam-pikchr  /app/inline.sh
+# docker run -it -v .:/data  -v ./fonts:/fonts -v ./icons:/icons -e FONT="ubuntu mono" -e NAME=veeamfulldemo veeam-pikchr /app/inline.sh
