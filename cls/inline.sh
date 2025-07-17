@@ -1,0 +1,1 @@
+./pikchr --svg-only /data/$NAME.pic | ./postpikchr.py -d /icons -o /data/$NAME.svg
