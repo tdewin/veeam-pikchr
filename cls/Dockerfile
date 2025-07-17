@@ -12,6 +12,13 @@ RUN apk add --no-cache build-base curl tar make &&\
 # Stage 2: Create a lightweight container with the compiled binary
 FROM python:3-alpine
 
+
+VOLUME /icons
+VOLUME /data
+VOLUME /fonts
+
+RUN apk add --no-cache librsvg rsvg-convert curl font-ubuntu
+
 # Set working directory
 WORKDIR /app
 
@@ -21,8 +28,9 @@ COPY ./postpikchr.py /app
 COPY ./prepikchr.py /app
 COPY ./sample.sh /app
 COPY ./inline.sh /app
-VOLUME /icons
-VOLUME /data
+
+ENV FONT="ubuntu mono"
+
 
 # Set the entry point
 ENTRYPOINT ["/bin/sh"]
@@ -40,5 +48,8 @@ ENTRYPOINT ["/bin/sh"]
 # ./pikchr --svg-only $NAME.pic | ./postpikchr.py -d /icons -o $NAME.svg
 
 # -or inline
+# you can modify the stylesheet in the fonts folder
+# by default the ubuntu font package is installed
+# eg download the ubuntu font from https://fonts.google.com/specimen/Ubuntu+Sans+Mono?query=Ubuntu (you need the latin one)
 # notice that /data/test.pic should exist, you can create it with the previous sample, then maintain it outside the container
-# docker run --rm -it -v .:/data -v ./icons:/icons -e NAME=test veeam-pikchr  /app/inline.sh
+# docker run --rm -it -v .:/data  -v ./fonts:/fonts -v ./icons:/icons -e FONT="ubuntu mono" -e NAME=veeamfulldemo veeam-pikchr  /app/inline.sh
