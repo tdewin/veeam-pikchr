@@ -114,14 +114,15 @@ def parse_svg_or_xml(tree,magic,verbose,font,searchdir,scale=1,fontscale=1):
         print(f"Error parsing XML: {e}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Parse SVG/XML from stdin.")
+    epilogtxt = "For branding assests such as logo's or fonts, go to https://www.veeam.com/company/brand-resource-center.html"
+    parser = argparse.ArgumentParser(description="Parse SVG/XML from stdin.",epilog=epilogtxt)
     parser.add_argument('--verbose', action='store_true', help='Enable verbose output')
     parser.add_argument('--output', '-o', type=str, help='Output file path (default: stdout)')
     parser.add_argument('--magic', type=str, help='Magic code color for replacement (default: rgb(238,0,160))',default="rgb(238,0,160)")
-    parser.add_argument('--font', '-f', type=str, help='Font for update', default="monospace") 
-    parser.add_argument('--fontscale', '-r', type=float, help='Scale font', default=1.0) 
+    parser.add_argument('--font', '-f', type=str, help='Font for update (ES Build default, custom Veeam Font request via branding)', default="ES Build") 
+    parser.add_argument('--fontscale', '-r', type=float, help='Scale font', default=1.2) 
     parser.add_argument('--dir', '-d', type=Path, help='Search for svgs in this path',default=Path("."))
-    parser.add_argument('--scale', '-s', type=float, help='Scale images',default=1.0)
+    parser.add_argument('--scale', '-s', type=float, help='Scale images',default=1.45)
     parser.add_argument('--clipboard','-c',action='store_true',help='Read from clipboard')
 
     args = parser.parse_args()

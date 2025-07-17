@@ -1,0 +1,19 @@
+$offset = 0.5
+
+
+NET: line from (0,0) to (boxwid*0.5,0) then to (boxwid*2,0) then to (boxwid*3.5,0) then to (boxwid*5,0) color $grey
+
+netdot(2nd)
+VBR: box "VBR" with .s at previous dot+ (0,$offset) color $remove
+albl(VBR,$grey,"VBR")
+conn(.s)
+
+netdot(3rd)
+PROXY:box "Proxy" with .n at previous dot - (0,$offset) color $remove
+blbl(PROXY,$grey,"Proxy")
+conn(.n)
+
+netdot(4rd)
+OS:box "Objectstorage" with .n at 4th vertex of NET - (0,$offset) color $remove
+blbl(OS,$grey,"Object Storage")
+conn(.n)

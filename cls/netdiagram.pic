@@ -14,14 +14,23 @@ $electricazure = 0x3700ff
 $sky = 0x57e0ff
 $ignis = 0xed2b3d
 
-$remove = 0xee00a0
-
 $grey = $darkmineral
 $green = $viridis
 $policy = $casia
 
-color = $remove
-fontscale = 1
+
+//https://github.com/drhsqlite/pikchr/blob/2c46091ee5548d4fa3fedaea2fc8c0a05c5a89eb/pikchr.y#L975
+thickness = 0.015*2
+
+charwid = 0.06
+charht = 0.10
+linerad = 0.1
+arrowht = 0.1
+arrowwid = 0.12
+
+$remove = 0xee00a0
+
+fontscale = 1.7
 
 //below icon label
 define blbl {
@@ -42,41 +51,46 @@ define conn {
 boxwid = 1
 boxht = 1
 
+$offset = boxht/1.5
+$o = boxht/8
+$oh = $o/2
+$o2 = $o*2
+$o3 = $o*3
+$o4 = $o*4
+$o5 = $o*5
+$o6 = $o*6
+
+
 //END VEEAM PREAMBLE
 
 //DIAGRAM
 //EDIT inside the DIAgram
 DIA:[
-  $offset = 0.5
+$offset = 0.5
 
-  NET: line from (0,0) to (boxwid*0.5,0) then to (boxwid*2,0) then to (boxwid*3.5,0) then to (boxwid*5,0) color $grey
 
-  netdot(2nd)
-  VBR: box "VBR" with .s at previous dot+ (0,$offset)
-  conn(.s)
+NET: line from (0,0) to (boxwid*0.5,0) then to (boxwid*2,0) then to (boxwid*3.5,0) then to (boxwid*5,0) color $grey
 
-  netdot(3rd)
-  PROXY:box "Proxy" with .n at previous dot - (0,$offset)
-  conn(.n)
+netdot(2nd)
+VBR: box "VBR" with .s at previous dot+ (0,$offset) color $remove
+albl(VBR,$grey,"VBR")
+conn(.s)
 
-  netdot(4rd)
-  OS:box "Objectstorage" with .n at 4th vertex of NET - (0,$offset)
-  conn(.n)
-  
-  
+netdot(3rd)
+PROXY:box "Proxy" with .n at previous dot - (0,$offset) color $remove
+blbl(PROXY,$grey,"Proxy")
+conn(.n)
+
+netdot(4rd)
+OS:box "Objectstorage" with .n at 4th vertex of NET - (0,$offset) color $remove
+blbl(OS,$grey,"Object Storage")
+conn(.n)
 ]
 
 //END DIAGRAM
 C: dot at DIA.n+(0,boxht/2) invis
-T: box with .c at previous.c color $grey "Veeam Diagram" big big big big bold fit invis
+T: box with .c at previous.c color $grey "Test" big big big big bold fit invis
 
 $mg = 0.3
-DIABOX:line from T.w left until even with DIA.nw -($mg,0) then\
- down until even with DIA.sw -(0,$mg) then\
- right until even with DIA.se +($mg,0) then\
- up until even with T.e then \
- left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
+DIABOX:line from T.w left until even with DIA.nw -($mg,0) then down until even with DIA.sw -(0,$mg) then right until even with DIA.se +($mg,0) then up until even with T.e then  left until even with T.e then to T.e rad 0.2 color $frenchgrey thickness 200% 
 
-
-
-box with .nw at DIABOX.sw "For more help https://helpcenter.veeam.com/" ljust small italic color $frenchgrey wid C.width invis ht boxht/2 
