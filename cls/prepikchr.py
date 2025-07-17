@@ -72,23 +72,7 @@ $o6 = $o*6
 //DIAGRAM
 //EDIT inside the DIAgram
 DIA:[
-            //
-            //replacements
-            
-            color = $remove
-#CLS#
-
-            //texts
-            color = $grey
-
 #TEXTS#
-
-
-            //connections
-
-#CONNS#
-
-            //
 ]
 
 //END DIAGRAM
@@ -113,41 +97,30 @@ def strip_trailing_digit(s):
 
 def main():
     parser = argparse.ArgumentParser(description="Create a file with the Veeam preamble content.")
-    parser.add_argument("--filename", help="The name of the file to create",default=None)
+    parser.add_argument("--infile","-i", help="pikchr file",default=None)
+    parser.add_argument("--outfile","-o", help="The name of the file to create",default=None)
     parser.add_argument("--title", help="Title",default="")
-    parser.add_argument("icons", help="Classes",default=["proxy0","repo0"],nargs='+')
-    parser.add_argument("--conns","-c", help="Connections",default=["proxy0,repo0"],nargs='+')
+    
     args = parser.parse_args()
 
-    lns =[]
-    tlns = []
-    for icon in args.icons:
-        nodigit = strip_trailing_digit(icon)
-        lns.append("{:10}: box \"{}\" color $remove".format(icon.upper(),nodigit))
-        lns.append("{:10}  {}".format("","move"))
-        tlns.append("{:10}  albl({},$grey,\"{}\")".format("",icon.upper(),nodigit.title()))
+    
 
-    clns = []
-    totalconns = len(args.conns)
-    hconns =  int(len(args.conns)/2)
-    for conn in args.conns:
-        s = conn.split(",")
-        sid = conn.upper().replace(",","")
-        if len(s)>1:
-            clns.append("{:10}: arrow -> from {} down boxht then down $o*{} then right until even with {}.s+($o*{},0) then to {}.s + ($o*{},0) chop".format(sid,s[0].upper(),totalconns,s[1].upper(),totalconns-hconns,s[1].upper(),totalconns-hconns))
-            clns.append("{:10}  text \"{}\" with .nw at 1st vertex of {} +($o,-$o)".format("",conn,sid))
-        totalconns -= 1 
-    icons = '\n'.join(lns)
-    texts = '\n'.join(tlns)
-    conns = '\n'.join(clns)
+    texts = ""
+
+    if args.infile:
+        with open(args.infile, 'r') as f:
+          texts = f.read()
+    else:
+      texts = sys.stdin.read()
+
     outtext = veeam_preamble
-    outtext = outtext.replace("#TITLE#",args.title).replace("#CLS#",icons).replace("#TEXTS#",texts).replace("#CONNS#",conns)
+    outtext = outtext.replace("#TITLE#",args.title).replace("#TEXTS#",texts)
 
-    if args.filename:
-        with open(args.filename, 'w') as f:
+    if args.outfile:
+        with open(args.outfile, 'w') as f:
             f.write(outtext)
 
-        print(f"File '{args.filename}' created with Veeam preamble content.")
+        print(f"File '{args.outfile}' created with Veeam preamble content.")
     else:
         print(outtext,file=sys.stdout)
 

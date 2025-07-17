@@ -24,10 +24,10 @@ WORKDIR /app
 
 # Copy the compiled binary from the builder stage
 COPY --from=builder /build/pikchr/pikchr /app
-COPY ./postpikchr.py /app
-COPY ./prepikchr.py /app
+COPY ./*.py /app
 COPY ./sample.sh /app
 COPY ./inline.sh /app
+COPY ./inline-pre.sh /app
 
 ENV FONT="ubuntu mono"
 
@@ -39,12 +39,13 @@ ENTRYPOINT ["/bin/sh"]
 
 
 # docker run --rm -it -v .:/data -v ./icons:/icons veeam-pikchr
-# ./prepikchr.py --title Test vbr proxy repo -c proxy,repo | ./pikchr --svg-only - | ./postpikchr.py -d /icons -o /data/test.svg
+# ./veeamdiagram.py vbr proxy repo -c proxy,repo | ./prepikchr.py --title Sample  | ./pikchr --svg-only - | ./postpikchr.py -d /icons -o /data/test.svg
 
 # -or 
 # docker run --rm -it -v .:/data -v ./icons:/icons veeam-pikchr
 # NAME=/data/test
-# ./prepikchr.py --title Test vbr proxy repo -c proxy,repo --filename $NAME.pic
+# ./veeamdiagram.py vbr proxy repo -c proxy,repo --filename $NAME.prepic
+# ./prepikchr.py --title Test -o $NAME.pic -i $NAME.prepic
 # ./pikchr --svg-only $NAME.pic | ./postpikchr.py -d /icons -o $NAME.svg
 
 # -or inline
